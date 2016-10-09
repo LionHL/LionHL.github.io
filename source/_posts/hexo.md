@@ -11,7 +11,7 @@ tags:
 <img src='/./bimages/img01.png' width='600' height='500' style='border: 1px solid #ccc;margin: 10px 0;'/>
 
 ## 在笔记本上操作
-###安装Hexo
+### 安装Hexo
 使用npm命令安装即可
 
 ```npm
