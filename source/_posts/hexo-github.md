@@ -1,14 +1,14 @@
 ---
 title: Hexo博客部署在GitHub上
 date: 2016-10-01 12:50:02
-tags:
+tags: [Hexo,GitHub]
 ---
 
 ## 在GitHub上的操作
 ### 新建一个Repository
 在 Repository name 下填写 yourname.github.io
 我的GitHub账号是LionHL，那么我的Repository name就是 LionHL.github.io
-<img src='/./bimages/img01.png' width='600' height='500' style='border: 1px solid #ccc;margin: 10px 0;'/>
+<img src='/./images/img01.png' width='600' height='500' style='border: 1px solid #ccc;margin: 10px 0;'/>
 
 ## 在笔记本上操作
 ### 安装Hexo
@@ -42,7 +42,7 @@ tags:
 ### 为 Hexo 安装 Git 插件
 安装 `hexo-deployer-git` 。否则当你把本地的部署到github上时会报 `ERROR Deployer not found: git ` 的错误，如图。
 
-<img src='/./bimages/img02.png' width='300' height='40' style='border: 1px solid #ccc;margin: 10px 0;'/>
+<img src='/./images/img02.png' width='300' height='40' style='border: 1px solid #ccc;margin: 10px 0;'/>
 ```npm 
   npm install hexo-deployer-git
 ```
@@ -50,7 +50,7 @@ tags:
 ### 修改你的 _config.yml 
 找到根目录下的 _config.yml 文件，修改你的 _config.yml 如下：
 
-<img src='/./bimages/img03.png' width='500' height='200'  style='border: 1px solid #ccc;margin: 10px 0;'/>
+<img src='/./images/img03.png' width='500' height='200'  style='border: 1px solid #ccc;margin: 10px 0;'/>
 ```npm
   # Deployment
   ## Docs: https://hexo.io/docs/deployment.html
