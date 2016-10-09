@@ -15,7 +15,7 @@ tags: [前端,Hexo,GitHub]
 使用npm命令安装即可
 
 ```npm
-  npm install -g hexo
+  npm install -g hexo-cli
 ```
 
 ### 创建 Hexo 文件夹
