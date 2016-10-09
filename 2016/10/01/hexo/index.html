@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/./bimages/img01.png">
 <meta property="og:image" content="http://yoursite.com/./bimages/img02.png">
 <meta property="og:image" content="http://yoursite.com/./bimages/img03.png">
-<meta property="og:updated_time" content="2016-10-07T15:14:33.000Z">
+<meta property="og:updated_time" content="2016-10-09T01:15:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客部署在GitHub上">
 <meta name="twitter:description" content="在GitHub上的操作新建一个Repository在 Repository name 下填写 yourname.github.io我的GitHub账号是LionHL，那么我的Repository name就是 LionHL.github.io
@@ -31,7 +31,7 @@
 <meta name="twitter:image" content="http://yoursite.com/./bimages/img01.png">
   
   
-    <link rel="icon" href="//./images/favicon.png">
+    <link rel="icon" href="/./images/favicon.png">
   
   <script src="/style.js"></script>
   
@@ -147,7 +147,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="在GitHub上的操作"><a href="#在GitHub上的操作" class="headerlink" title="在GitHub上的操作"></a>在GitHub上的操作</h2><h3 id="新建一个Repository"><a href="#新建一个Repository" class="headerlink" title="新建一个Repository"></a>新建一个Repository</h3><p>在 Repository name 下填写 yourname.github.io<br>我的GitHub账号是LionHL，那么我的Repository name就是 LionHL.github.io<br><img src="/./bimages/img01.png" width="600" height="500"></p>
+        <h2 id="在GitHub上的操作"><a href="#在GitHub上的操作" class="headerlink" title="在GitHub上的操作"></a>在GitHub上的操作</h2><h3 id="新建一个Repository"><a href="#新建一个Repository" class="headerlink" title="新建一个Repository"></a>新建一个Repository</h3><p>在 Repository name 下填写 yourname.github.io<br>我的GitHub账号是LionHL，那么我的Repository name就是 LionHL.github.io<br><img src="/./bimages/img01.png" width="600" height="500" style="border: 1px solid #ccc;margin: 10px 0;"></p>
 <h2 id="在笔记本上操作"><a href="#在笔记本上操作" class="headerlink" title="在笔记本上操作"></a>在笔记本上操作</h2><p>###安装Hexo<br>使用npm命令安装即可</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
 <h3 id="创建-Hexo-文件夹"><a href="#创建-Hexo-文件夹" class="headerlink" title="创建 Hexo 文件夹"></a>创建 Hexo 文件夹</h3><p>在你本地的Hexo文件夹下操作，安装Hexo。Hexo 即会自动在目标文件夹建立网站所需要的所有文件</p>
@@ -156,9 +156,9 @@
 <h3 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a>本地查看</h3><p>完成以上步骤，你就可以查看本地的hexo了。执行 <code>hexo generate</code>  <code>hexo server</code> ，然后在浏览器中打开localhost:4000。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo server</div></pre></td></tr></table></figure>
 <h3 id="为-Hexo-安装-Git-插件"><a href="#为-Hexo-安装-Git-插件" class="headerlink" title="为 Hexo 安装 Git 插件"></a>为 Hexo 安装 Git 插件</h3><p>安装 <code>hexo-deployer-git</code> 。否则当你把本地的部署到github上时会报 <code>ERROR Deployer not found: git</code> 的错误，如图。</p>
-<p><img src="/./bimages/img02.png" width="300" height="40"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git</div></pre></td></tr></table></figure></p>
+<p><img src="/./bimages/img02.png" width="300" height="40" style="border: 1px solid #ccc;margin: 10px 0;"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git</div></pre></td></tr></table></figure></p>
 <h3 id="修改你的-config-yml"><a href="#修改你的-config-yml" class="headerlink" title="修改你的 _config.yml"></a>修改你的 _config.yml</h3><p>找到根目录下的 _config.yml 文件，修改你的 _config.yml 如下：</p>
-<p><img src="/./bimages/img03.png" width="500" height="200"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:LionHL/LionHL.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p><img src="/./bimages/img03.png" width="500" height="200" style="border: 1px solid #ccc;margin: 10px 0;"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:LionHL/LionHL.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
 <p>注意这里选择的是 ssh 地址   </p>
 <h3 id="生成静态文件并部署到-GitHub-上"><a href="#生成静态文件并部署到-GitHub-上" class="headerlink" title="生成静态文件并部署到 GitHub 上"></a>生成静态文件并部署到 GitHub 上</h3><p>执行以下命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
