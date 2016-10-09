@@ -1,7 +1,7 @@
 ---
 title: Hexo博客部署在GitHub上
 date: 2016-10-01 12:50:02
-tags: [Hexo,GitHub]
+tags: [前端,Hexo,GitHub]
 ---
 
 ## 在GitHub上的操作
