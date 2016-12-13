@@ -4,14 +4,27 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>LionHL</title>
+  <title>css-hack | LionHL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="LionHL">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="CSS Hack这段几天稍微看了一下css hack，就做了个笔记总结一下，主要针对IE6~IE11。但对于hack，我自己不太推荐使用。
+条件注释法IE浏览器专有的Hack方式:&amp;lt;!--[if IE]&amp;gt; 只在IE下生效 &amp;lt;![endif]--&amp;gt;
+&amp;lt;!--[if IE 8]&amp;gt; 只在IE8下生效 &amp;lt;![endif]--&amp;gt;
+&amp;lt;!--[if gte">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css-hack">
+<meta property="og:url" content="http://yoursite.com/2016/12/13/css-hack/index.html">
 <meta property="og:site_name" content="LionHL">
+<meta property="og:description" content="CSS Hack这段几天稍微看了一下css hack，就做了个笔记总结一下，主要针对IE6~IE11。但对于hack，我自己不太推荐使用。
+条件注释法IE浏览器专有的Hack方式:&amp;lt;!--[if IE]&amp;gt; 只在IE下生效 &amp;lt;![endif]--&amp;gt;
+&amp;lt;!--[if IE 8]&amp;gt; 只在IE8下生效 &amp;lt;![endif]--&amp;gt;
+&amp;lt;!--[if gte">
+<meta property="og:updated_time" content="2016-12-13T07:24:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LionHL">
+<meta name="twitter:title" content="css-hack">
+<meta name="twitter:description" content="CSS Hack这段几天稍微看了一下css hack，就做了个笔记总结一下，主要针对IE6~IE11。但对于hack，我自己不太推荐使用。
+条件注释法IE浏览器专有的Hack方式:&amp;lt;!--[if IE]&amp;gt; 只在IE下生效 &amp;lt;![endif]--&amp;gt;
+&amp;lt;!--[if IE 8]&amp;gt; 只在IE8下生效 &amp;lt;![endif]--&amp;gt;
+&amp;lt;!--[if gte">
   
     <link rel="alternative" href="/atom.xml" title="LionHL" type="application/atom+xml">
   
@@ -116,9 +129,7 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-    <article id="post-css-hack" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-css-hack" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -127,8 +138,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/13/css-hack/">css-hack</a>
+    <h1 class="article-title" itemprop="name">
+      css-hack
     </h1>
   
 
@@ -193,196 +204,45 @@
   </div>
 </article>
 
-
-
-
-
-
-
-
-
-
   
-    <article id="post-swiper" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/01/swiper/">Swiper</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近在一个项目中使用了<code>Swiper</code>这个插件，就来分享一下。<br>网上还有中文的学习文档，所以学习起来也十分的方便，大家可以去官网看看<a target="_blank" href="http://www.swiper.com.cn/">Swiper中文网</a></p>
-<p><b> Swiper 介绍 </b><br>Swiper 是一款免费以及轻量级的移动设备触控滑块的js框架，使用硬件加速过渡（如果该设备支持的话）。主要使用于移动端的网站、移动web apps，native apps和hybrid apps。主要是为IOS而设计的，同时，在Android、WP8系统也有着良好的用户体验，Swiper从3.0开始不再全面支持PC端。因此，如需在PC上兼容更多的浏览器，可以选择Swiper2.x（甚至支持IE7）。</p>
-<p><b>Swiper常用于移动端网站的内容触摸滑动</b><br>Swiper是纯javascript打造的滑动特效插件，面向手机、平板电脑等移动终端。<br>Swiper能实现触屏焦点图、触屏Tab切换、触屏多图切换等常用效果。<br>Swiper开源、免费、稳定、使用简单、功能强大，是架构移动终端网站的重要选择！</p>
-<p><b> 版本区别 </b><br>swiper.3.x 版本其主要适用的对象是移动端。所以对PC端的浏览器兼容并不友好。<br>swiper.2.x 对PC端浏览器的兼容性比较好，甚至支持IE7。<a href="http://2.swiper.com.cn/" target="_blank">swiper2文档</a><br>(由于项目不仅需要支持移动端的轮播，还要在<code>IE7+</code>正常显示，所以我选择了swiper.2.x)</p>
-<p><b> 结合css3动画效果 </b><br>swiper可以配合你喜欢的动画效果，可以实现惊人的效果。在这里附上Swiper animate的使用方法：<br><a href="http://www.swiper.com.cn/usage/animate/index.html" target="_blank">Swiper Animate</a></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/12/01/swiper/" class="archive-article-date">
-  	<time datetime="2016-12-01T02:29:11.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-01</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swiper/">swiper</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-mac-xcrun-error" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/18/mac-xcrun-error/">mac-xcrun-error</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Mac升级系统后执行git命令，出现如下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools),</div><div class="line">missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</div></pre></td></tr></table></figure></p>
-<p>解决方法：<br>在终端执行命令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/10/18/mac-xcrun-error/" class="archive-article-date">
-  	<time datetime="2016-10-18T06:00:50.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-18</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hexo-github" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/01/hexo-github/">Hexo博客部署在GitHub上</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="在GitHub上的操作"><a href="#在GitHub上的操作" class="headerlink" title="在GitHub上的操作"></a>在GitHub上的操作</h2><h3 id="新建一个Repository"><a href="#新建一个Repository" class="headerlink" title="新建一个Repository"></a>新建一个Repository</h3><p>在 Repository name 下填写 yourname.github.io<br>我的GitHub账号是LionHL，那么我的Repository name就是 LionHL.github.io<br><img src="/./images/img01.png" width="600" height="500" style="border: 1px solid #ccc;margin: 10px 0;"></p>
-<h2 id="在笔记本上操作"><a href="#在笔记本上操作" class="headerlink" title="在笔记本上操作"></a>在笔记本上操作</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>使用npm命令安装即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<h3 id="创建-Hexo-文件夹"><a href="#创建-Hexo-文件夹" class="headerlink" title="创建 Hexo 文件夹"></a>创建 Hexo 文件夹</h3><p>在你本地的Hexo文件夹下操作，安装Hexo。Hexo 即会自动在目标文件夹建立网站所需要的所有文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
-<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
-<h3 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a>本地查看</h3><p>完成以上步骤，你就可以查看本地的hexo了。执行 <code>hexo generate</code>  <code>hexo server</code> ，然后在浏览器中打开localhost:4000。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo server</div></pre></td></tr></table></figure>
-<h3 id="为-Hexo-安装-Git-插件"><a href="#为-Hexo-安装-Git-插件" class="headerlink" title="为 Hexo 安装 Git 插件"></a>为 Hexo 安装 Git 插件</h3><p>安装 <code>hexo-deployer-git</code> 。否则当你把本地的部署到github上时会报 <code>ERROR Deployer not found: git</code> 的错误，如图。</p>
-<p><img src="/./images/img02.png" width="300" height="40" style="border: 1px solid #ccc;margin: 10px 0;"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git</div></pre></td></tr></table></figure></p>
-<h3 id="修改你的-config-yml"><a href="#修改你的-config-yml" class="headerlink" title="修改你的 _config.yml"></a>修改你的 _config.yml</h3><p>找到根目录下的 _config.yml 文件，修改你的 _config.yml 如下：</p>
-<p><img src="/./images/img03.png" width="500" height="200" style="border: 1px solid #ccc;margin: 10px 0;"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:LionHL/LionHL.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
-<p>注意这里选择的是 ssh 地址   </p>
-<h3 id="生成静态文件并部署到-GitHub-上"><a href="#生成静态文件并部署到-GitHub-上" class="headerlink" title="生成静态文件并部署到 GitHub 上"></a>生成静态文件并部署到 GitHub 上</h3><p>执行以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
-<p>完成以上步骤，我们就搭建好自己的博客并部署到 GitHub 上了，我们可以在浏览器里打开 LionHL.github.io 查看自己的博客。第一次访问的时候可能访问不了，你可以过几分钟再进行访问。</p>
-<h3 id="Hexo-常见操作命令"><a href="#Hexo-常见操作命令" class="headerlink" title="Hexo 常见操作命令"></a>Hexo 常见操作命令</h3><p>hexo new “postName” 新建文章<br>hexo new page “pageName” 新建页面<br>hexo generate 生成静态页面至public目录<br>hexo server 开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy 将.deploy目录部署到GitHub<br>hexo help   查看帮助<br>hexo version  查看Hexo的版本</p>
-<h3 id="关于-themes"><a href="#关于-themes" class="headerlink" title="关于 themes"></a>关于 themes</h3><p>Hexo 提供了很多 theme 供你选择，在这我就不多做介绍了，自己可以去搜索。<br>我目前用的是 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">hexo-theme-yilia</a><br>简单介绍一下我安装的步骤吧。<br>在本地的 hexo 文件夹下执行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone git@github.com:litten/hexo-theme-yilia.git themes/yalia</div></pre></td></tr></table></figure>
-<p>完成后你可以在本地themes下看见 yilia(自己定其他的名字) 主题包。然后在 _config.yml 文件里主题修改为 <code>theme: yilia</code></p>
-<h4 id="修改头像"><a href="#修改头像" class="headerlink" title="修改头像"></a>修改头像</h4><p>打开 themes/yalia/_config.yml 文件，在 <code>#你的头像url  avatar:</code>后面添加一个url就行了。<br>（一些其他的设置也在这个文件里面修改，具体的可以自己查看）<br>在执行部署提交 <code>hexo g</code> <code>hexo d</code></p>
-<p><br><br></p>
-<h2 id="关于管理"><a href="#关于管理" class="headerlink" title="关于管理"></a>关于管理</h2><p>在完成以上步骤后，就完成了Hexo博客部署在GitHub上的操作了，这时会发现一个问题，如果我们更换了电脑，怎么更新管理博客呢？难道要将以上的所有步骤在新的电脑上再执行一遍？<br>不用这么麻烦，其实，Hexo生成的文件里面有.gitignore，它的本意应该也是放在GitHub上的。<br>所以我们可以考虑使用分支，创建一个分支hexo，来存放blog的原始文件。</p>
-<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>1、新建一个Repository， LionHL.github.io<br>2、创建两个分支，master和hexo，并将hexo设置为默认分支（因为我们要管理这个Hexo网站文件）<br>3、克隆仓库 git clone git@github.com:LionHL/LionHL.github.io.git<br>4、在本地文件夹下执行安装Hexo操作（如上在笔记本上操作，在这里我就不重复了，这个时候当前显示的分支应该是hexo）<br>5、修改生成的.gitignore文件，并上传github。（使用git add . ,git commit -m ‘…’, git push origin hexo 等操作）<br>6、生成静态文件并部署到 GitHub 上（hexo g, hexo d）</p>
-<p>这样我们就算资料丢失或者更换电脑也不用害怕了，直接克隆仓库就可以了。<br>注意，在本地拷贝LionHL.github.io.git之后，执行安装Hexo操作时不需要<code>hexo init</code>这个命令了。</p>
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      <a href="/2016/10/01/hexo-github/" class="archive-article-date">
-  	<time datetime="2016-10-01T04:50:02.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-10-01</time>
-</a>
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
-      
-
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-
-
+<nav id="article-nav">
   
   
+    <a href="/2016/12/01/swiper/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Swiper</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="css-hack" data-title="css-hack" data-url="http://yoursite.com/2016/12/13/css-hack/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"LionHL"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 
       </div>
@@ -404,8 +264,8 @@
 		fancybox: true,
 		mathjax: false,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
