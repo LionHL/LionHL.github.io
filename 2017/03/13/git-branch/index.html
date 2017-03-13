@@ -4,21 +4,30 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Swiper | LionHL</title>
+  <title>git 分支操作 | LionHL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近在一个项目中使用了Swiper这个插件，就来分享一下。网上还有中文的学习文档，所以学习起来也十分的方便，大家可以去官网看看Swiper中文网
- Swiper 介绍 Swiper 是一款免费以及轻量级的移动设备触控滑块的js框架，使用硬件加速过渡（如果该设备支持的话）。主要使用于移动端的网站、移动web apps，native apps和hybrid apps。主要是为IOS而设计的，同时，在A">
+  <meta name="description" content="git 分支创建一个名为 dev 的分支1git checkout -b dev
+推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）1git push origin dev:dev
+or  
+1git push origin dev
+作了修改之后提交到远程dev分支123...git push -u origin dev  //此时有了跟踪分支，本地dev分支跟踪了 ori">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Swiper">
-<meta property="og:url" content="http://yoursite.com/2016/12/01/swiper/index.html">
+<meta property="og:title" content="git 分支操作">
+<meta property="og:url" content="http://yoursite.com/2017/03/13/git-branch/index.html">
 <meta property="og:site_name" content="LionHL">
-<meta property="og:description" content="最近在一个项目中使用了Swiper这个插件，就来分享一下。网上还有中文的学习文档，所以学习起来也十分的方便，大家可以去官网看看Swiper中文网
- Swiper 介绍 Swiper 是一款免费以及轻量级的移动设备触控滑块的js框架，使用硬件加速过渡（如果该设备支持的话）。主要使用于移动端的网站、移动web apps，native apps和hybrid apps。主要是为IOS而设计的，同时，在A">
-<meta property="og:updated_time" content="2016-12-01T03:33:20.000Z">
+<meta property="og:description" content="git 分支创建一个名为 dev 的分支1git checkout -b dev
+推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）1git push origin dev:dev
+or  
+1git push origin dev
+作了修改之后提交到远程dev分支123...git push -u origin dev  //此时有了跟踪分支，本地dev分支跟踪了 ori">
+<meta property="og:updated_time" content="2017-03-13T06:39:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Swiper">
-<meta name="twitter:description" content="最近在一个项目中使用了Swiper这个插件，就来分享一下。网上还有中文的学习文档，所以学习起来也十分的方便，大家可以去官网看看Swiper中文网
- Swiper 介绍 Swiper 是一款免费以及轻量级的移动设备触控滑块的js框架，使用硬件加速过渡（如果该设备支持的话）。主要使用于移动端的网站、移动web apps，native apps和hybrid apps。主要是为IOS而设计的，同时，在A">
+<meta name="twitter:title" content="git 分支操作">
+<meta name="twitter:description" content="git 分支创建一个名为 dev 的分支1git checkout -b dev
+推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）1git push origin dev:dev
+or  
+1git push origin dev
+作了修改之后提交到远程dev分支123...git push -u origin dev  //此时有了跟踪分支，本地dev分支跟踪了 ori">
   
     <link rel="alternative" href="/atom.xml" title="LionHL" type="application/atom+xml">
   
@@ -123,7 +132,7 @@
 </nav>
 
       <div class="body-wrap">
-        <article id="post-swiper" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-git-branch" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <input type="hidden" class="isFancy" />
@@ -133,7 +142,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Swiper
+      git 分支操作
     </h1>
   
 
@@ -141,25 +150,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近在一个项目中使用了<code>Swiper</code>这个插件，就来分享一下。<br>网上还有中文的学习文档，所以学习起来也十分的方便，大家可以去官网看看<a target="_blank" href="http://www.swiper.com.cn/">Swiper中文网</a></p>
-<p><b> Swiper 介绍 </b><br>Swiper 是一款免费以及轻量级的移动设备触控滑块的js框架，使用硬件加速过渡（如果该设备支持的话）。主要使用于移动端的网站、移动web apps，native apps和hybrid apps。主要是为IOS而设计的，同时，在Android、WP8系统也有着良好的用户体验，Swiper从3.0开始不再全面支持PC端。因此，如需在PC上兼容更多的浏览器，可以选择Swiper2.x（甚至支持IE7）。</p>
-<p><b>Swiper常用于移动端网站的内容触摸滑动</b><br>Swiper是纯javascript打造的滑动特效插件，面向手机、平板电脑等移动终端。<br>Swiper能实现触屏焦点图、触屏Tab切换、触屏多图切换等常用效果。<br>Swiper开源、免费、稳定、使用简单、功能强大，是架构移动终端网站的重要选择！</p>
-<p><b> 版本区别 </b><br>swiper.3.x 版本其主要适用的对象是移动端。所以对PC端的浏览器兼容并不友好。<br>swiper.2.x 对PC端浏览器的兼容性比较好，甚至支持IE7。<a href="http://2.swiper.com.cn/" target="_blank">swiper2文档</a><br>(由于项目不仅需要支持移动端的轮播，还要在<code>IE7+</code>正常显示，所以我选择了swiper.2.x)</p>
-<p><b> 结合css3动画效果 </b><br>swiper可以配合你喜欢的动画效果，可以实现惊人的效果。在这里附上Swiper animate的使用方法：<br><a href="http://www.swiper.com.cn/usage/animate/index.html" target="_blank">Swiper Animate</a></p>
-
+        <h1 id="git-分支"><a href="#git-分支" class="headerlink" title="git 分支"></a>git 分支</h1><h3 id="创建一个名为-dev-的分支"><a href="#创建一个名为-dev-的分支" class="headerlink" title="创建一个名为 dev 的分支"></a>创建一个名为 dev 的分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b dev</div></pre></td></tr></table></figure>
+<h3 id="推送本地的dev分支，将其作为远程的dev分支-（本地分支名-远程分支名）"><a href="#推送本地的dev分支，将其作为远程的dev分支-（本地分支名-远程分支名）" class="headerlink" title="推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）"></a>推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin dev:dev</div></pre></td></tr></table></figure>
+<p>or  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin dev</div></pre></td></tr></table></figure>
+<h3 id="作了修改之后提交到远程dev分支"><a href="#作了修改之后提交到远程dev分支" class="headerlink" title="作了修改之后提交到远程dev分支"></a>作了修改之后提交到远程dev分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">git push -u origin dev  </div><div class="line">//此时有了跟踪分支，本地dev分支跟踪了 origin/dev</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看跟踪分支</div><div class="line">git branch -vv</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看远程分支</div><div class="line">git branch -r</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看所有分支</div><div class="line">git branch -a</div></pre></td></tr></table></figure>
+<h3 id="变基rebase"><a href="#变基rebase" class="headerlink" title="变基rebase"></a>变基rebase</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git checkout dev</div><div class="line">git rebase master</div><div class="line">//上面两步可合并为 git rebase master dev</div><div class="line">git checkout master</div><div class="line">git merge dev</div><div class="line">git push</div></pre></td></tr></table></figure>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git branch -D dev</div><div class="line">git push origin --delete dev</div></pre></td></tr></table></figure>
+<h3 id="远程更新取回本地git-fetch"><a href="#远程更新取回本地git-fetch" class="headerlink" title="远程更新取回本地git fetch"></a>远程更新取回本地git fetch</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git fetch &lt;远程主机名&gt;</div><div class="line">//清理本地分支</div><div class="line">git fetch -p</div></pre></td></tr></table></figure>
+<h3 id="建立远程跟踪分支"><a href="#建立远程跟踪分支" class="headerlink" title="建立远程跟踪分支"></a>建立远程跟踪分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b serverfix origin/serverfix</div></pre></td></tr></table></figure>
       
     </div>
     <div class="article-info article-info-index">
       
-      <a href="/2016/12/01/swiper/" class="archive-article-date">
-  	<time datetime="2016-12-01T02:29:11.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-12-01</time>
+      <a href="/2017/03/13/git-branch/" class="archive-article-date">
+  	<time datetime="2017-03-13T06:35:58.000Z" itemprop="datePublished"><i class="icon-clock"></i>2017-03-13</time>
 </a>
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/swiper/">swiper</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
-	</div>
-
       
 
       <div class="clearfix"></div>
@@ -170,18 +180,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/12/13/css-hack/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          css-hack
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/10/18/mac-xcrun-error/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">mac-xcrun-error</div>
+    <a href="/2016/12/13/css-hack/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css-hack</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -196,7 +197,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="swiper" data-title="Swiper" data-url="http://yoursite.com/2016/12/01/swiper/"></div>
+	<div class="ds-thread" data-thread-key="git-branch" data-title="git 分支操作" data-url="http://yoursite.com/2017/03/13/git-branch/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
