@@ -18,7 +18,7 @@
 条件注释法IE浏览器专有的Hack方式:&amp;lt;!--[if IE]&amp;gt; 只在IE下生效 &amp;lt;![endif]--&amp;gt;
 &amp;lt;!--[if IE 8]&amp;gt; 只在IE8下生效 &amp;lt;![endif]--&amp;gt;
 &amp;lt;!--[if gte">
-<meta property="og:updated_time" content="2016-12-13T07:26:42.000Z">
+<meta property="og:updated_time" content="2017-06-29T06:06:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css-hack">
 <meta name="twitter:description" content="CSS Hack这段几天稍微看了一下css hack，就做了个笔记总结一下，主要针对IE6~IE11。但对于hack，我自己不太推荐使用。
@@ -155,6 +155,7 @@
 <p><code>&lt;!--[if !IE 8]&gt; 只在IE8上不生效 &lt;![endif]--&gt;</code></p>
 <p><code>&lt;!--[if !IE]&gt;&lt;!--&gt; 非IE浏览器生效 &lt;!--&lt;![endif]--&gt;</code></p>
 <p>但当IE的版本到到达10/11后，开始不支持这种条件性注释</p>
+<a id="more"></a>
 <h2 id="符号前缀"><a href="#符号前缀" class="headerlink" title="符号前缀"></a>符号前缀</h2><h3 id="CSS属性前缀"><a href="#CSS属性前缀" class="headerlink" title="CSS属性前缀:"></a>CSS属性前缀:</h3><p><code>&#39;_&#39;</code> : IE6<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Selector</span> &#123; <span class="attribute">_property</span>: value; &#125;</div></pre></td></tr></table></figure></p>
 <p><code>&#39;*&#39;</code> : IE6/7<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Selector &#123;*property: value;&#125;</div></pre></td></tr></table></figure></p>
 <p><code>&#39;#&#39;</code> : IE6/7<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Selector &#123;#property: value;&#125;</div></pre></td></tr></table></figure></p>
@@ -231,27 +232,23 @@
 
 
 
-<div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="css-hack" data-title="css-hack" data-url="http://yoursite.com/2016/12/13/css-hack/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"LionHL"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
 
 
+<section id="comments">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'lionhl'; // required: replace example with your forum shortname
 
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
 
 
       </div>
