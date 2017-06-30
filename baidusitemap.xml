@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/10/01/hexo-github/</loc>
+    <lastmod>2017-06-30T06:42:36.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo博客部署在GitHub上</title>
+        <pubTime>2016-10-01T04:50:02.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>Hexo</tag>
+         
+        <tag>GitHub</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/06/29/js-traversal/</loc>
     <lastmod>2017-06-29T06:17:58.000Z</lastmod>
     <data>
@@ -56,27 +77,6 @@
         <tag>mac</tag>
          
         <tag>git</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/10/01/hexo-github/</loc>
-    <lastmod>2017-06-29T06:16:05.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo博客部署在GitHub上</title>
-        <pubTime>2016-10-01T04:50:02.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>Hexo</tag>
-         
-        <tag>GitHub</tag>
          
          
            
