@@ -1,7 +1,7 @@
 ---
 title: mac-xcrun-error
 date: 2016-10-18 14:00:50
-tags: [mac,git]
+tags: [笔记,mac,git]
 ---
 Mac升级系统后执行git命令，出现如下错误：
 ```error
