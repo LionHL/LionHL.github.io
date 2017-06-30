@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LionHL</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-06-29T06:17:58.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>LionHL</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript中的遍历循环方法之map、forEach、for-in、for-of</title>
+    <link href="http://yoursite.com/2017/06/29/js-traversal/"/>
+    <id>http://yoursite.com/2017/06/29/js-traversal/</id>
+    <published>2017-06-29T03:49:55.000Z</published>
+    <updated>2017-06-29T06:17:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h2><p>对数组的所有成员一次调用一个函数，根据函数结果返回一个新数组。   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var array = [1, 2, 3];</div><div class="line">array.map(function (n) &#123;</div><div class="line">	return n + 1;</div><div class="line">&#125;);</div><div class="line">// [2, 3, 4]</div><div class="line"></div><div class="line">array</div><div class="line">// [1, 2, 3]</div><div class="line"></div><div class="line">/*</div><div class="line"> *	array数组所有成员都加上1，组成新数组，原数组没有变化</div><div class="line"> */</div></pre></td></tr></table></figure>
+<a id="more"></a> 
+<p><code>map</code>方法接收一个函数作为参数。调用时传入三个参数，分别是当前成员、当前位置和数组本身。    </p>
+<p>语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var new_array = arr.map(function callback(currentValue, index, array) &#123;</div><div class="line">    // Return element for new_array</div><div class="line">&#125;[, thisArg])</div><div class="line"></div><div class="line">// thisArg 可选的。执行 callback 函数时 使用的this 值</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;];</div><div class="line">[1, 2].map(function (e) &#123;</div><div class="line">	return this[e];</div><div class="line">&#125;, arr)</div><div class="line">// [&apos;b&apos;, &apos;c&apos;]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[1, 2, 3].map(function (elem, index, arr) &#123;</div><div class="line">	return elem * index;</div><div class="line">&#125;);</div><div class="line">//	[0, 2, 6]</div></pre></td></tr></table></figure>
+<p><code>map</code>方法还可以用于字符串，用来遍历字符串的每个字符。但不能直接使用，要通过函数的<code>call</code>方法间接使用，或者先转为数组，然后使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var upper = function (x) &#123;</div><div class="line">	return x.toUpperCase();</div><div class="line">&#125;;</div><div class="line"></div><div class="line">[].map.call(&apos;abc&apos;, upper)</div><div class="line">// [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div><div class="line"></div><div class="line">// 或者</div><div class="line">&apos;abc&apos;.split(&apos;&apos;).map(upper)</div><div class="line">// [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div><div class="line"> </div><div class="line"> </div><div class="line">// 反转字符串：</div><div class="line">var str = &apos;12345&apos;;</div><div class="line">Array.prototype.map.call(str, function(x) &#123;</div><div class="line">	return x;</div><div class="line">&#125;).reverse().join(&apos;&apos;);</div><div class="line">// &apos;54321&apos;</div></pre></td></tr></table></figure>
+<p>如果数组有空位，<code>map</code>方法的回调函数在这个位置不会执行，会跳过数组的空位。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var f = function(n) &#123; return n + 1 &#125;;</div><div class="line"></div><div class="line">[1, undefined, 2].map(f)	// [2, NaN, 3]</div><div class="line">[1, null, 2].map(f)			// [2, 1, 3]</div><div class="line">[1,  , 2].map(f)				// [2,  , 3]</div></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h2><p><code>forEach</code>与<code>map</code>方法相似，遍历数组所有成员，执行某种操作，但不返回值。   </p>
+<p><code>forEach</code>方法接收一个函数作为参数。调用时传入三个参数，分别是当前成员、当前位置和数组本身。语法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">array.forEach(callback(currentValue, index, array) &#123;</div><div class="line">	// do something</div><div class="line">&#125;, this)</div><div class="line"></div><div class="line">array.forEach(callback[, thisArg])</div><div class="line"></div><div class="line">// thisArg 可选参数。当执行回调 函数时用作this的值(参考对象)。</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function log(element, index, array) &#123;</div><div class="line">	console.log(&apos;[&apos; + index + &apos;] = &apos; + element);</div><div class="line">&#125;</div><div class="line"></div><div class="line">[2, 5, 9].forEach(log);</div><div class="line">// [0] = 2</div><div class="line">// [1] = 5</div><div class="line">// [3] = 9</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 接受第二个参数，用来绑定回调函数的 this 关键字</div><div class="line">var out = [];</div><div class="line"></div><div class="line">[1, 2, 3].forEach(function(elem) &#123;</div><div class="line">	this.push(elem * elem);</div><div class="line">&#125;, out);</div><div class="line"></div><div class="line">out		// [1, 4, 9]</div></pre></td></tr></table></figure>
+<p><code>forEach</code>会跳过数组的空位   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var log = function (n) &#123; console.log(n + 1); &#125;;</div><div class="line"></div><div class="line">[1, undefined, 2].forEach(log)	</div><div class="line">// 2</div><div class="line">// NaN</div><div class="line">// 3</div><div class="line"></div><div class="line">[1, null, 2].forEach(log)</div><div class="line">// 2</div><div class="line">// 1</div><div class="line">// 3</div><div class="line"></div><div class="line">[1,  , 2].forEach(log)</div><div class="line">// 2</div><div class="line">// 3</div></pre></td></tr></table></figure>
+<p>注：<code>forEach</code>方法无法中断执行，会将所有成员遍历完。如果想符合某种条件中断遍历，使用<code>for</code>循环。   </p>
+<p><code>forEach</code>也可用于类似数组的对象和字符串。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">	0: 1,</div><div class="line">	a: &apos;hello&apos;,</div><div class="line">	length: 1</div><div class="line">&#125;</div><div class="line"></div><div class="line">Array.prototype.forEach.call(obj, function (elem, i) &#123;</div><div class="line">	console.log(i + &apos;:&apos; + elem);</div><div class="line">&#125;);</div><div class="line">// 0:1</div><div class="line"></div><div class="line">// obj是一个类似数组的对象，forEach方法可以遍历它的数字键</div><div class="line"></div><div class="line">var str = &apos;hello&apos;;</div><div class="line">Array.prototype.forEach.call(str, function (elem, i) &#123;</div><div class="line">	console.log(i + &apos;:&apos; + elem);</div><div class="line">&#125;);</div><div class="line">// 0:h</div><div class="line">// 1:e</div><div class="line">// 2:l</div><div class="line">// 3:l</div><div class="line">// 4:o</div></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="for-in"><a href="#for-in" class="headerlink" title="for in"></a>for in</h2><p><code>for-in</code>循环实际是为循环<code>enumerable</code>对象而设计的，一般不推荐循环数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">	a: 1,</div><div class="line">	b: 2,</div><div class="line">	c: 3</div><div class="line">&#125;</div><div class="line"></div><div class="line">for (var prop in obj) &#123;</div><div class="line">	console.log(&apos;obj.&apos; + prop + &apos; = &apos; + obj[prop]);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">// obj.a = 1</div><div class="line">// obj.b = 2</div><div class="line">// obj.c = 3</div><div class="line"></div><div class="line">/* 循环数组 */</div><div class="line">fof (var i in maArray) &#123;			// 不推荐</div><div class="line">	console.log(myArray[index]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="for-of"><a href="#for-of" class="headerlink" title="for of"></a>for of</h2><p>语法：   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for (variable of object) &#123;</div><div class="line">	statment</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>遍历Array:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var array = [10, 20, 30];</div><div class="line">for (let value of array) &#123;</div><div class="line">	console.log(value);</div><div class="line">&#125;</div><div class="line">// 10</div><div class="line">// 20</div><div class="line">// 30</div></pre></td></tr></table></figure>
+<p>遍历String：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let it = &apos;boo&apos;;</div><div class="line">for (let value of it) &#123;</div><div class="line">	console.log(value);</div><div class="line">&#125;</div><div class="line">// b</div><div class="line">// o</div><div class="line">// o</div></pre></td></tr></table></figure>
+<p>遍历DOM集合：   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 给每个article标签的p子标签添加一个‘read’ class</div><div class="line"></div><div class="line">let articleParagrahs = documment.querySelectorAll(&apos;article &gt; p&apos;);</div><div class="line"></div><div class="line">for (let paragrahs of articleParagraphs) &#123;</div><div class="line">	paragrahs.classList.add(&apos;read&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>遍历生成器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function* fibonacci() &#123;		// 一个生成器函数</div><div class="line">	let [prev, curr] = [0, 1];</div><div class="line">	for (;;) &#123;</div><div class="line">		[prev, curr] = [curr, prev + curr];</div><div class="line">		yield curr;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">for (let n of fibonacci()) &#123;</div><div class="line">	if (n &gt; 1000)</div><div class="line">		break;</div><div class="line">	console.log(n);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><br></p>
+<hr>
+<p><br></p>
+<h2 id="for-of-与-for-in的区别"><a href="#for-of-与-for-in的区别" class="headerlink" title="for of 与 for in的区别"></a>for of 与 for in的区别</h2><p>for in循环会遍历一个object所有的可枚举属性。<br>for of是为了各种collection对象专门定制的，并不适用于所有的object。它会议这种方式迭代出任何拥有[Symbol.iterator]属性的collection对象的每个元素。   </p>
+<p>for in 遍历（当前对象及原型上的）每个元素属性名称<br>for of 遍历（当前对象上的）每一个属性值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Object.prototype.objCustom = function () &#123;&#125;;</div><div class="line">Array.prototype.arrCustom = function () &#123;&#125;;</div><div class="line"></div><div class="line">let it = [3, 5, 7];</div><div class="line">it.foo = &apos;hello&apos;;</div><div class="line"></div><div class="line">for (let i in it) &#123;</div><div class="line">	console.log(i);		// logs 0, 1, 2, &apos;foo&apos;, &apos;arrCustom&apos;, &apos;objCustom&apos;</div><div class="line">&#125;</div><div class="line"></div><div class="line">for (let i of it) &#123;</div><div class="line">	console.log(i);		// logs 3, 5, 7</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;map&quot;&gt;&lt;a href=&quot;#map&quot; class=&quot;headerlink&quot; title=&quot;map()&quot;&gt;&lt;/a&gt;map()&lt;/h2&gt;&lt;p&gt;对数组的所有成员一次调用一个函数，根据函数结果返回一个新数组。   &lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;var array = [1, 2, 3];&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;array.map(function (n) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;	return n + 1;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;);&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// [2, 3, 4]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;array&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;// [1, 2, 3]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;/*&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; *	array数组所有成员都加上1，组成新数组，原数组没有变化&lt;/div&gt;&lt;div class=&quot;line&quot;&gt; */&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="map()" scheme="http://yoursite.com/tags/map/"/>
+    
+      <category term="forEach()" scheme="http://yoursite.com/tags/forEach/"/>
+    
+      <category term="for in()" scheme="http://yoursite.com/tags/for-in/"/>
+    
+      <category term="for of()" scheme="http://yoursite.com/tags/for-of/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git 分支操作</title>
+    <link href="http://yoursite.com/2017/03/13/git-branch/"/>
+    <id>http://yoursite.com/2017/03/13/git-branch/</id>
+    <published>2017-03-13T06:35:58.000Z</published>
+    <updated>2017-06-29T06:15:59.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。</p>
+<h1 id="git-分支"><a href="#git-分支" class="headerlink" title="git 分支"></a>git 分支</h1><h3 id="创建一个名为-dev-的分支"><a href="#创建一个名为-dev-的分支" class="headerlink" title="创建一个名为 dev 的分支"></a>创建一个名为 dev 的分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b dev</div></pre></td></tr></table></figure>
+<h3 id="推送本地的dev分支，将其作为远程的dev分支-（本地分支名-远程分支名）"><a href="#推送本地的dev分支，将其作为远程的dev分支-（本地分支名-远程分支名）" class="headerlink" title="推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）"></a>推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin dev:dev</div></pre></td></tr></table></figure>
+<p>or<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin dev</div></pre></td></tr></table></figure></p>
+<h3 id="作了修改之后提交到远程dev分支"><a href="#作了修改之后提交到远程dev分支" class="headerlink" title="作了修改之后提交到远程dev分支"></a>作了修改之后提交到远程dev分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">git push -u origin dev  </div><div class="line">//此时有了跟踪分支，本地dev分支跟踪了 origin/dev</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看跟踪分支</div><div class="line">git branch -vv</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看远程分支</div><div class="line">git branch -r</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看所有分支</div><div class="line">git branch -a</div></pre></td></tr></table></figure>
+<h3 id="变基rebase"><a href="#变基rebase" class="headerlink" title="变基rebase"></a>变基rebase</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git checkout dev</div><div class="line">git rebase master</div><div class="line">//上面两步可合并为 git rebase master dev</div><div class="line">git checkout master</div><div class="line">git merge dev</div><div class="line">git push</div></pre></td></tr></table></figure>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git branch -D dev</div><div class="line">git push origin --delete dev</div></pre></td></tr></table></figure>
+<h3 id="远程更新取回本地git-fetch"><a href="#远程更新取回本地git-fetch" class="headerlink" title="远程更新取回本地git fetch"></a>远程更新取回本地git fetch</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git fetch &lt;远程主机名&gt;</div><div class="line">//清理本地分支</div><div class="line">git fetch -p</div></pre></td></tr></table></figure>
+<h3 id="建立远程跟踪分支"><a href="#建立远程跟踪分支" class="headerlink" title="建立远程跟踪分支"></a>建立远程跟踪分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b serverfix origin/serverfix</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。&lt;/p&gt;
+&lt;h1 id=&quot;git-分支&quot;&gt;&lt;a href=&quot;#git-分支&quot; class=&quot;headerlink&quot; title=&quot;git 分支&quot;&gt;&lt;/a&gt;git 分支&lt;/h1&gt;&lt;h3 id=&quot;创建一个名为-dev-的分支&quot;&gt;&lt;a href=&quot;#创建一个名为-dev-的分支&quot; class=&quot;headerlink&quot; title=&quot;创建一个名为 dev 的分支&quot;&gt;&lt;/a&gt;创建一个名为 dev 的分支&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git checkout -b dev&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;推送本地的dev分支，将其作为远程的dev分支-（本地分支名-远程分支名）&quot;&gt;&lt;a href=&quot;#推送本地的dev分支，将其作为远程的dev分支-（本地分支名-远程分支名）&quot; class=&quot;headerlink&quot; title=&quot;推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）&quot;&gt;&lt;/a&gt;推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）&lt;/h3&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;git push origin dev:dev&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;or&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>css-hack</title>
+    <link href="http://yoursite.com/2016/12/13/css-hack/"/>
+    <id>http://yoursite.com/2016/12/13/css-hack/</id>
+    <published>2016-12-13T04:50:02.000Z</published>
+    <updated>2017-06-29T06:06:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="CSS-Hack"><a href="#CSS-Hack" class="headerlink" title="CSS Hack"></a>CSS Hack</h1><p>这段几天稍微看了一下css hack，就做了个笔记总结一下，主要针对IE6~IE11。但对于hack，我自己不太推荐使用。</p>
+<h2 id="条件注释法"><a href="#条件注释法" class="headerlink" title="条件注释法"></a>条件注释法</h2><p>IE浏览器专有的Hack方式:<br><code>&lt;!--[if IE]&gt; 只在IE下生效 &lt;![endif]--&gt;</code></p>
+<p><code>&lt;!--[if IE 8]&gt; 只在IE8下生效 &lt;![endif]--&gt;</code></p>
+<p><code>&lt;!--[if gte IE 8]&gt; 只在IE8以上(包括IE8)版本IE浏览器显示生效 &lt;![endif]--&gt;</code></p>
+<p><code>&lt;!--[if lt IE 8]&gt; 只在IE8以下(包括IE8)版本IE浏览器显示生效 &lt;![endif]--&gt;</code></p>
+<p><code>&lt;!--[if !IE 8]&gt; 只在IE8上不生效 &lt;![endif]--&gt;</code></p>
+<p><code>&lt;!--[if !IE]&gt;&lt;!--&gt; 非IE浏览器生效 &lt;!--&lt;![endif]--&gt;</code></p>
+<p>但当IE的版本到到达10/11后，开始不支持这种条件性注释</p>
+<a id="more"></a>
+<h2 id="符号前缀"><a href="#符号前缀" class="headerlink" title="符号前缀"></a>符号前缀</h2><h3 id="CSS属性前缀"><a href="#CSS属性前缀" class="headerlink" title="CSS属性前缀:"></a>CSS属性前缀:</h3><p><code>&#39;_&#39;</code> : IE6<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Selector</span> &#123; <span class="attribute">_property</span>: value; &#125;</div></pre></td></tr></table></figure></p>
+<p><code>&#39;*&#39;</code> : IE6/7<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Selector &#123;*property: value;&#125;</div></pre></td></tr></table></figure></p>
+<p><code>&#39;#&#39;</code> : IE6/7<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Selector &#123;#property: value;&#125;</div></pre></td></tr></table></figure></p>
+<p><code>&#39;+&#39;</code> : IE7<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Selector</span> +<span class="selector-tag">property</span>: <span class="selector-tag">value</span>;</div></pre></td></tr></table></figure></p>
+<p><code>&#39;\0&#39;</code> : IE8+<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Selector</span> &#123;<span class="attribute">property</span>: value\<span class="number">0</span>;&#125;</div></pre></td></tr></table></figure></p>
+<p><code>&#39;\9&#39;</code> : IE6 ~ IE10<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Selector</span> &#123;<span class="attribute">property</span>: value\<span class="number">9</span>;&#125;</div></pre></td></tr></table></figure></p>
+<p><code>&#39;\0\9&#39;</code> : IE8+<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Selector</span> &#123;<span class="attribute">property</span>: value\<span class="number">0</span>\<span class="number">9</span>;&#125;</div></pre></td></tr></table></figure></p>
+<p><code>&#39;\9\0&#39;</code> :IE9/10<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">Selector</span> &#123;<span class="attribute">property</span>: value\<span class="number">9</span>\<span class="number">0</span>;&#125;</div></pre></td></tr></table></figure></p>
+<p>注意hack的书写顺序</p>
+<h3 id="选择器前缀"><a href="#选择器前缀" class="headerlink" title="选择器前缀:"></a>选择器前缀:</h3><p><code>&#39;*html selector&#39;</code> : IE6<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">*<span class="selector-tag">html</span> <span class="selector-tag">Selector</span> &#123;<span class="attribute">property</span>: value;&#125;</div></pre></td></tr></table></figure></p>
+<p><code>&#39;*+html selector&#39;</code> &amp;&amp; <code>&#39;*:first-child+html&#39;</code> : 针对IE7<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">*+html Selector &#123;property: value;&#125;</div><div class="line">'*:first-child+html' Selector &#123;property: value;&#125;</div></pre></td></tr></table></figure></p>
+<p><code>:root Selector {property: value\9;}</code>    IE9/10</p>
+<h3 id="media方法"><a href="#media方法" class="headerlink" title="@media方法"></a>@media方法</h3><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">IE6/7 :</div><div class="line">@media screen\9&#123;</div><div class="line">	Selector &#123;property: value;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">IE8</span> :</div><div class="line">@<span class="keyword">media</span> \<span class="number">0s</span>creen&#123;</div><div class="line">	<span class="selector-tag">Selector</span> &#123;<span class="attribute">property</span>: value;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">IE8-</span> :</div><div class="line">@<span class="keyword">media</span> \<span class="number">0s</span>creen\,screen\<span class="number">9</span>&#123;</div><div class="line">	<span class="selector-tag">Selector</span> &#123;<span class="attribute">property</span>: value;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">IE8</span>+ :</div><div class="line">@<span class="keyword">media</span> screen\<span class="number">0</span>&#123;</div><div class="line">	<span class="selector-tag">Selector</span> &#123;<span class="attribute">property</span>: value;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">IE9</span>+ :</div><div class="line">@<span class="keyword">media</span> screen and (min-width:<span class="number">0</span>\<span class="number">0</span>)&#123;</div><div class="line">	<span class="selector-tag">Selector</span> &#123;<span class="attribute">property</span>: value;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">IE10</span>+ :</div><div class="line">@<span class="keyword">media</span> screen and (-ms-high-contrast: active), (-ms-high-contrast: none)&#123;</div><div class="line">	<span class="selector-tag">Selector</span> &#123;<span class="attribute">property</span>: value;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a>Firefox</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@-<span class="keyword">moz</span>-<span class="keyword">document</span> url-prefix() &#123; </div><div class="line">  <span class="selector-class">.selector</span> &#123; <span class="attribute">property</span>: value; &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="Webkit内核浏览器-chrome-and-safari"><a href="#Webkit内核浏览器-chrome-and-safari" class="headerlink" title="Webkit内核浏览器(chrome and safari)"></a>Webkit内核浏览器(chrome and safari)</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">media</span> screen and (-webkit-min-device-pixel-ratio:<span class="number">0</span>)&#123;</div><div class="line">	<span class="selector-class">.selector</span> &#123; <span class="attribute">property</span>: value; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><br><br></p>
+<h3 id="IE10-css-hack"><a href="#IE10-css-hack" class="headerlink" title="IE10 css hack"></a>IE10 css hack</h3><h4 id="特性检测：-cc-on"><a href="#特性检测：-cc-on" class="headerlink" title="特性检测：@cc_on"></a>特性检测：@cc_on</h4><p>我们可以利用IE私有的<code>条件编译</code>结合条件注释(确保IE6~9不承认它)来提供针对IE10的css hack，然后使用它的特点检测<code>@cc_on</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;!--[<span class="keyword">if</span> ! IE]&gt;&lt;!--&gt;</div><div class="line">	&lt;script&gt;</div><div class="line">		if(/*@cc_on!@*/false)&#123;</div><div class="line">			document.documentElement.className+=' ie10';</div><div class="line">		&#125;</div><div class="line">	&lt;/script&gt;</div><div class="line">&lt;!--&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<p>注意<code>/*@cc_on!@*/</code>中间的这个<code>!</code>感叹号。<br>接下来就可以在ie10中给html元素添加一个class=”ie10”，然后针对ie10样式就可以使用这个选择器了，如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.ie10</span> <span class="selector-class">.example</span> &#123;</div><div class="line">	<span class="comment">/* IE10-only styles go here */</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>IE11已不支持<code>@cc_on</code>，所以我们也可以这样区分：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if !IE]&gt;&lt;!--&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">        <span class="comment">// 针对IE10</span></div><div class="line">        <span class="keyword">if</span> (<span class="comment">/*@cc_on!@*/</span><span class="literal">false</span>) &#123;</div><div class="line">            <span class="built_in">document</span>.documentElement.className += <span class="string">' ie'</span> + <span class="built_in">document</span>.documentMode;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">// 针对IE11及非IE浏览器，</span></div><div class="line">        <span class="comment">// 因为IE11下document.documentMode为11，所以html标签上会加ie11样式类；</span></div><div class="line">        <span class="comment">// 而非IE浏览器的document.documentMode为undefined，所以html标签上会加ieundefined样式类。</span></div><div class="line">        <span class="keyword">if</span> (<span class="comment">/*@cc_on!@*/</span><span class="literal">true</span>) &#123;</div><div class="line">            <span class="built_in">document</span>.documentElement.className += <span class="string">' ie'</span> + <span class="built_in">document</span>.documentMode;</div><div class="line">        &#125;</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--&lt;![endif]--&gt;</span></div><div class="line">   </div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="css"></span></div><div class="line">    <span class="selector-class">.ie10</span> <span class="selector-class">.testclass</span> &#123;</div><div class="line">        <span class="attribute">color</span>: red</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.ie11</span> <span class="selector-class">.testclass</span> &#123;</div><div class="line">        <span class="attribute">color</span>: blue</div><div class="line">    &#125;</div><div class="line">    <span class="selector-class">.ieundefined</span>  <span class="selector-class">.testclass</span> &#123;</div><div class="line">        <span class="attribute">color</span>: green</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>document.documentMode可以查看IEdocumentMode属性（IE8+新增）</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;CSS-Hack&quot;&gt;&lt;a href=&quot;#CSS-Hack&quot; class=&quot;headerlink&quot; title=&quot;CSS Hack&quot;&gt;&lt;/a&gt;CSS Hack&lt;/h1&gt;&lt;p&gt;这段几天稍微看了一下css hack，就做了个笔记总结一下，主要针对IE6~IE11。但对于hack，我自己不太推荐使用。&lt;/p&gt;
+&lt;h2 id=&quot;条件注释法&quot;&gt;&lt;a href=&quot;#条件注释法&quot; class=&quot;headerlink&quot; title=&quot;条件注释法&quot;&gt;&lt;/a&gt;条件注释法&lt;/h2&gt;&lt;p&gt;IE浏览器专有的Hack方式:&lt;br&gt;&lt;code&gt;&amp;lt;!--[if IE]&amp;gt; 只在IE下生效 &amp;lt;![endif]--&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;!--[if IE 8]&amp;gt; 只在IE8下生效 &amp;lt;![endif]--&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;!--[if gte IE 8]&amp;gt; 只在IE8以上(包括IE8)版本IE浏览器显示生效 &amp;lt;![endif]--&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;!--[if lt IE 8]&amp;gt; 只在IE8以下(包括IE8)版本IE浏览器显示生效 &amp;lt;![endif]--&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;!--[if !IE 8]&amp;gt; 只在IE8上不生效 &amp;lt;![endif]--&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;!--[if !IE]&amp;gt;&amp;lt;!--&amp;gt; 非IE浏览器生效 &amp;lt;!--&amp;lt;![endif]--&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;但当IE的版本到到达10/11后，开始不支持这种条件性注释&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="CssHack" scheme="http://yoursite.com/tags/CssHack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Swiper</title>
+    <link href="http://yoursite.com/2016/12/01/swiper/"/>
+    <id>http://yoursite.com/2016/12/01/swiper/</id>
+    <published>2016-12-01T02:29:11.000Z</published>
+    <updated>2017-06-29T06:16:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在一个项目中使用了<code>Swiper</code>这个插件，就来分享一下。<br>网上还有中文的学习文档，所以学习起来也十分的方便，大家可以去官网看看<a target="_blank" href="http://www.swiper.com.cn/">Swiper中文网</a><br><a id="more"></a><br><b> Swiper 介绍 </b><br>Swiper 是一款免费以及轻量级的移动设备触控滑块的js框架，使用硬件加速过渡（如果该设备支持的话）。主要使用于移动端的网站、移动web apps，native apps和hybrid apps。主要是为IOS而设计的，同时，在Android、WP8系统也有着良好的用户体验，Swiper从3.0开始不再全面支持PC端。因此，如需在PC上兼容更多的浏览器，可以选择Swiper2.x（甚至支持IE7）。</p>
+<p><b>Swiper常用于移动端网站的内容触摸滑动</b><br>Swiper是纯javascript打造的滑动特效插件，面向手机、平板电脑等移动终端。<br>Swiper能实现触屏焦点图、触屏Tab切换、触屏多图切换等常用效果。<br>Swiper开源、免费、稳定、使用简单、功能强大，是架构移动终端网站的重要选择！</p>
+<p><b> 版本区别 </b><br>swiper.3.x 版本其主要适用的对象是移动端。所以对PC端的浏览器兼容并不友好。<br>swiper.2.x 对PC端浏览器的兼容性比较好，甚至支持IE7。<a href="http://2.swiper.com.cn/" target="_blank">swiper2文档</a><br>(由于项目不仅需要支持移动端的轮播，还要在<code>IE7+</code>正常显示，所以我选择了swiper.2.x)</p>
+<p><b> 结合css3动画效果 </b><br>swiper可以配合你喜欢的动画效果，可以实现惊人的效果。在这里附上Swiper animate的使用方法：<br><a href="http://www.swiper.com.cn/usage/animate/index.html" target="_blank">Swiper Animate</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在一个项目中使用了&lt;code&gt;Swiper&lt;/code&gt;这个插件，就来分享一下。&lt;br&gt;网上还有中文的学习文档，所以学习起来也十分的方便，大家可以去官网看看&lt;a target=&#39;_blank&#39; href=&#39;http://www.swiper.com.cn/&#39;&gt;Swiper中文网&lt;/a&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="swiper" scheme="http://yoursite.com/tags/swiper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac-xcrun-error</title>
+    <link href="http://yoursite.com/2016/10/18/mac-xcrun-error/"/>
+    <id>http://yoursite.com/2016/10/18/mac-xcrun-error/</id>
+    <published>2016-10-18T06:00:50.000Z</published>
+    <updated>2017-06-29T06:16:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Mac升级系统后执行git命令，出现如下错误：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools),</div><div class="line">missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</div></pre></td></tr></table></figure></p>
+<a id="more"></a> 
+<p>解决方法：<br>在终端执行命令:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Mac升级系统后执行git命令，出现如下错误：&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools),&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo博客部署在GitHub上</title>
+    <link href="http://yoursite.com/2016/10/01/hexo-github/"/>
+    <id>http://yoursite.com/2016/10/01/hexo-github/</id>
+    <published>2016-10-01T04:50:02.000Z</published>
+    <updated>2017-06-29T06:16:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="在GitHub上的操作"><a href="#在GitHub上的操作" class="headerlink" title="在GitHub上的操作"></a>在GitHub上的操作</h2><h3 id="新建一个Repository"><a href="#新建一个Repository" class="headerlink" title="新建一个Repository"></a>新建一个Repository</h3><p>在 Repository name 下填写 yourname.github.io<br>我的GitHub账号是LionHL，那么我的Repository name就是 LionHL.github.io<br><img src="/./images/img01.png" width="600" height="500" style="border: 1px solid #ccc;margin: 10px 0;"></p>
+<h2 id="在笔记本上操作"><a href="#在笔记本上操作" class="headerlink" title="在笔记本上操作"></a>在笔记本上操作</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>使用npm命令安装即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<a id="more"></a> 
+<h3 id="创建-Hexo-文件夹"><a href="#创建-Hexo-文件夹" class="headerlink" title="创建 Hexo 文件夹"></a>创建 Hexo 文件夹</h3><p>在你本地的Hexo文件夹下操作，安装Hexo。Hexo 即会自动在目标文件夹建立网站所需要的所有文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
+<h3 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure>
+<h3 id="本地查看"><a href="#本地查看" class="headerlink" title="本地查看"></a>本地查看</h3><p>完成以上步骤，你就可以查看本地的hexo了。执行 <code>hexo generate</code>  <code>hexo server</code> ，然后在浏览器中打开localhost:4000。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line">hexo server</div></pre></td></tr></table></figure>
+<h3 id="为-Hexo-安装-Git-插件"><a href="#为-Hexo-安装-Git-插件" class="headerlink" title="为 Hexo 安装 Git 插件"></a>为 Hexo 安装 Git 插件</h3><p>安装 <code>hexo-deployer-git</code> 。否则当你把本地的部署到github上时会报 <code>ERROR Deployer not found: git</code> 的错误，如图。</p>
+<p><img src="/./images/img02.png" width="300" height="40" style="border: 1px solid #ccc;margin: 10px 0;"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git</div></pre></td></tr></table></figure></p>
+<h3 id="修改你的-config-yml"><a href="#修改你的-config-yml" class="headerlink" title="修改你的 _config.yml"></a>修改你的 _config.yml</h3><p>找到根目录下的 _config.yml 文件，修改你的 _config.yml 如下：</p>
+<p><img src="/./images/img03.png" width="500" height="200" style="border: 1px solid #ccc;margin: 10px 0;"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:LionHL/LionHL.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<p>注意这里选择的是 ssh 地址   </p>
+<h3 id="生成静态文件并部署到-GitHub-上"><a href="#生成静态文件并部署到-GitHub-上" class="headerlink" title="生成静态文件并部署到 GitHub 上"></a>生成静态文件并部署到 GitHub 上</h3><p>执行以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure>
+<p>完成以上步骤，我们就搭建好自己的博客并部署到 GitHub 上了，我们可以在浏览器里打开 LionHL.github.io 查看自己的博客。第一次访问的时候可能访问不了，你可以过几分钟再进行访问。</p>
+<h3 id="Hexo-常见操作命令"><a href="#Hexo-常见操作命令" class="headerlink" title="Hexo 常见操作命令"></a>Hexo 常见操作命令</h3><p>hexo new “postName” 新建文章<br>hexo new page “pageName” 新建页面<br>hexo generate 生成静态页面至public目录<br>hexo server 开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br>hexo deploy 将.deploy目录部署到GitHub<br>hexo help   查看帮助<br>hexo version  查看Hexo的版本</p>
+<h3 id="关于-themes"><a href="#关于-themes" class="headerlink" title="关于 themes"></a>关于 themes</h3><p>Hexo 提供了很多 theme 供你选择，在这我就不多做介绍了，自己可以去搜索。<br>我目前用的是 <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">hexo-theme-yilia</a><br>简单介绍一下我安装的步骤吧。<br>在本地的 hexo 文件夹下执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone git@github.com:litten/hexo-theme-yilia.git themes/yalia</div></pre></td></tr></table></figure>
+<p>完成后你可以在本地themes下看见 yilia(自己定其他的名字) 主题包。然后在 _config.yml 文件里主题修改为 <code>theme: yilia</code></p>
+<h4 id="修改头像"><a href="#修改头像" class="headerlink" title="修改头像"></a>修改头像</h4><p>打开 themes/yalia/_config.yml 文件，在 <code>#你的头像url  avatar:</code>后面添加一个url就行了。<br>（一些其他的设置也在这个文件里面修改，具体的可以自己查看）<br>在执行部署提交 <code>hexo g</code> <code>hexo d</code></p>
+<p><br><br></p>
+<h2 id="关于管理"><a href="#关于管理" class="headerlink" title="关于管理"></a>关于管理</h2><p>在完成以上步骤后，就完成了Hexo博客部署在GitHub上的操作了，这时会发现一个问题，如果我们更换了电脑，怎么更新管理博客呢？难道要将以上的所有步骤在新的电脑上再执行一遍？<br>不用这么麻烦，其实，Hexo生成的文件里面有.gitignore，它的本意应该也是放在GitHub上的。<br>所以我们可以考虑使用分支，创建一个分支hexo，来存放blog的原始文件。</p>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>1、新建一个Repository， LionHL.github.io<br>2、创建两个分支，master和hexo，并将hexo设置为默认分支（因为我们要管理这个Hexo网站文件）<br>3、克隆仓库 git clone git@github.com:LionHL/LionHL.github.io.git<br>4、在本地文件夹下执行安装Hexo操作（如上在笔记本上操作，在这里我就不重复了，这个时候当前显示的分支应该是hexo）<br>5、修改生成的.gitignore文件，并上传github。（使用git add . ,git commit -m ‘…’, git push origin hexo 等操作）<br>6、生成静态文件并部署到 GitHub 上（hexo g, hexo d）</p>
+<p>这样我们就算资料丢失或者更换电脑也不用害怕了，直接克隆仓库就可以了。<br>注意，在本地拷贝LionHL.github.io.git之后，执行安装Hexo操作时不需要<code>hexo init</code>这个命令了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;在GitHub上的操作&quot;&gt;&lt;a href=&quot;#在GitHub上的操作&quot; class=&quot;headerlink&quot; title=&quot;在GitHub上的操作&quot;&gt;&lt;/a&gt;在GitHub上的操作&lt;/h2&gt;&lt;h3 id=&quot;新建一个Repository&quot;&gt;&lt;a href=&quot;#新建一个Repository&quot; class=&quot;headerlink&quot; title=&quot;新建一个Repository&quot;&gt;&lt;/a&gt;新建一个Repository&lt;/h3&gt;&lt;p&gt;在 Repository name 下填写 yourname.github.io&lt;br&gt;我的GitHub账号是LionHL，那么我的Repository name就是 LionHL.github.io&lt;br&gt;&lt;img src=&#39;/./images/img01.png&#39; width=&#39;600&#39; height=&#39;500&#39; style=&#39;border: 1px solid #ccc;margin: 10px 0;&#39;/&gt;&lt;/p&gt;
+&lt;h2 id=&quot;在笔记本上操作&quot;&gt;&lt;a href=&quot;#在笔记本上操作&quot; class=&quot;headerlink&quot; title=&quot;在笔记本上操作&quot;&gt;&lt;/a&gt;在笔记本上操作&lt;/h2&gt;&lt;h3 id=&quot;安装Hexo&quot;&gt;&lt;a href=&quot;#安装Hexo&quot; class=&quot;headerlink&quot; title=&quot;安装Hexo&quot;&gt;&lt;/a&gt;安装Hexo&lt;/h3&gt;&lt;p&gt;使用npm命令安装即可&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;npm install -g hexo-cli&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="GitHub" scheme="http://yoursite.com/tags/GitHub/"/>
+    
+  </entry>
+  
+</feed>
