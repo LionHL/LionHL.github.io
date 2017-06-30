@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-06-29T06:17:58.000Z</updated>
+  <updated>2017-06-30T08:22:29.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/06/29/js-traversal/"/>
     <id>http://yoursite.com/2017/06/29/js-traversal/</id>
     <published>2017-06-29T03:49:55.000Z</published>
-    <updated>2017-06-29T06:17:58.000Z</updated>
+    <updated>2017-06-30T08:22:29.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h2><p>对数组的所有成员一次调用一个函数，根据函数结果返回一个新数组。   </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var array = [1, 2, 3];</div><div class="line">array.map(function (n) &#123;</div><div class="line">	return n + 1;</div><div class="line">&#125;);</div><div class="line">// [2, 3, 4]</div><div class="line"></div><div class="line">array</div><div class="line">// [1, 2, 3]</div><div class="line"></div><div class="line">/*</div><div class="line"> *	array数组所有成员都加上1，组成新数组，原数组没有变化</div><div class="line"> */</div></pre></td></tr></table></figure>
@@ -75,13 +75,7 @@
     </summary>
     
     
-      <category term="map()" scheme="http://yoursite.com/tags/map/"/>
-    
-      <category term="forEach()" scheme="http://yoursite.com/tags/forEach/"/>
-    
-      <category term="for in()" scheme="http://yoursite.com/tags/for-in/"/>
-    
-      <category term="for of()" scheme="http://yoursite.com/tags/for-of/"/>
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
     
   </entry>
   
@@ -90,7 +84,7 @@
     <link href="http://yoursite.com/2017/03/13/git-branch/"/>
     <id>http://yoursite.com/2017/03/13/git-branch/</id>
     <published>2017-03-13T06:35:58.000Z</published>
-    <updated>2017-06-29T06:15:59.000Z</updated>
+    <updated>2017-06-30T08:20:29.000Z</updated>
     
     <content type="html"><![CDATA[<p>这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。</p>
 <h1 id="git-分支"><a href="#git-分支" class="headerlink" title="git 分支"></a>git 分支</h1><h3 id="创建一个名为-dev-的分支"><a href="#创建一个名为-dev-的分支" class="headerlink" title="创建一个名为 dev 的分支"></a>创建一个名为 dev 的分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b dev</div></pre></td></tr></table></figure>
@@ -115,6 +109,8 @@
     </summary>
     
     
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
   </entry>
   
   <entry>
@@ -122,7 +118,7 @@
     <link href="http://yoursite.com/2016/12/13/css-hack/"/>
     <id>http://yoursite.com/2016/12/13/css-hack/</id>
     <published>2016-12-13T04:50:02.000Z</published>
-    <updated>2017-06-29T06:06:04.000Z</updated>
+    <updated>2017-06-30T08:20:39.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="CSS-Hack"><a href="#CSS-Hack" class="headerlink" title="CSS Hack"></a>CSS Hack</h1><p>这段几天稍微看了一下css hack，就做了个笔记总结一下，主要针对IE6~IE11。但对于hack，我自己不太推荐使用。</p>
 <h2 id="条件注释法"><a href="#条件注释法" class="headerlink" title="条件注释法"></a>条件注释法</h2><p>IE浏览器专有的Hack方式:<br><code>&lt;!--[if IE]&gt; 只在IE下生效 &lt;![endif]--&gt;</code></p>
@@ -177,9 +173,7 @@
     </summary>
     
     
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="CssHack" scheme="http://yoursite.com/tags/CssHack/"/>
+      <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
   </entry>
   
@@ -188,7 +182,7 @@
     <link href="http://yoursite.com/2016/12/01/swiper/"/>
     <id>http://yoursite.com/2016/12/01/swiper/</id>
     <published>2016-12-01T02:29:11.000Z</published>
-    <updated>2017-06-29T06:16:20.000Z</updated>
+    <updated>2017-06-30T08:19:55.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近在一个项目中使用了<code>Swiper</code>这个插件，就来分享一下。<br>网上还有中文的学习文档，所以学习起来也十分的方便，大家可以去官网看看<a target="_blank" href="http://www.swiper.com.cn/">Swiper中文网</a><br><a id="more"></a><br><b> Swiper 介绍 </b><br>Swiper 是一款免费以及轻量级的移动设备触控滑块的js框架，使用硬件加速过渡（如果该设备支持的话）。主要使用于移动端的网站、移动web apps，native apps和hybrid apps。主要是为IOS而设计的，同时，在Android、WP8系统也有着良好的用户体验，Swiper从3.0开始不再全面支持PC端。因此，如需在PC上兼容更多的浏览器，可以选择Swiper2.x（甚至支持IE7）。</p>
 <p><b>Swiper常用于移动端网站的内容触摸滑动</b><br>Swiper是纯javascript打造的滑动特效插件，面向手机、平板电脑等移动终端。<br>Swiper能实现触屏焦点图、触屏Tab切换、触屏多图切换等常用效果。<br>Swiper开源、免费、稳定、使用简单、功能强大，是架构移动终端网站的重要选择！</p>
@@ -202,8 +196,6 @@
     
     </summary>
     
-    
-      <category term="前端" scheme="http://yoursite.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="swiper" scheme="http://yoursite.com/tags/swiper/"/>
     
@@ -228,9 +220,9 @@
     </summary>
     
     
-      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
-    
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+      <category term="mac" scheme="http://yoursite.com/tags/mac/"/>
     
   </entry>
   
@@ -239,7 +231,7 @@
     <link href="http://yoursite.com/2016/10/01/hexo-github/"/>
     <id>http://yoursite.com/2016/10/01/hexo-github/</id>
     <published>2016-10-01T04:50:02.000Z</published>
-    <updated>2017-06-30T06:42:36.000Z</updated>
+    <updated>2017-06-30T08:20:32.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="在GitHub上的操作"><a href="#在GitHub上的操作" class="headerlink" title="在GitHub上的操作"></a>在GitHub上的操作</h2><h3 id="新建一个Repository"><a href="#新建一个Repository" class="headerlink" title="新建一个Repository"></a>新建一个Repository</h3><p>在 Repository name 下填写 yourname.github.io<br>我的GitHub账号是LionHL，那么我的Repository name就是 LionHL.github.io<br><img src="/./images/img01.png" width="600" height="500" style="border: 1px solid #ccc;margin: 10px 0;"></p>
 <h2 id="在笔记本上操作"><a href="#在笔记本上操作" class="headerlink" title="在笔记本上操作"></a>在笔记本上操作</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>使用npm命令安装即可</p>
