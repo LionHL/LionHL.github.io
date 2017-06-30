@@ -17,7 +17,7 @@ tags: [前端,Hexo,GitHub]
 ```npm
   npm install -g hexo-cli
 ```
-
+<!--more--> 
 ### 创建 Hexo 文件夹
 在你本地的Hexo文件夹下操作，安装Hexo。Hexo 即会自动在目标文件夹建立网站所需要的所有文件
 

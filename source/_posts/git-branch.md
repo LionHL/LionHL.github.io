@@ -4,6 +4,9 @@ date: 2017-03-13 14:35:58
 tags:
 ---
 
+这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。
+
+
 # git 分支
 ### 创建一个名为 dev 的分支  
  
@@ -15,7 +18,7 @@ git checkout -b dev
 git push origin dev:dev
 ```
 or  
-
+<!--more--> 
 ```git
 git push origin dev
 ```

@@ -7,7 +7,7 @@ title: LionHL
 subtitle:
 description:
 author: LionHL
-language:
+language: zh-CN
 timezone:
 
 # URL
@@ -63,7 +63,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yalia
+theme: yilia
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -71,3 +71,25 @@ deploy:
   type: git
   repo: git@github.com:LionHL/LionHL.github.io.git
   branch: master
+
+# disqus
+disqus_shortname: lionhl
+
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: true
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true

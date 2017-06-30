@@ -6,7 +6,7 @@ tags: [前端,swiper]
 
 最近在一个项目中使用了`Swiper`这个插件，就来分享一下。   
 网上还有中文的学习文档，所以学习起来也十分的方便，大家可以去官网看看<a target='_blank' href='http://www.swiper.com.cn/'>Swiper中文网</a>
-
+<!--more--> 
 <b> Swiper 介绍 </b>
 Swiper 是一款免费以及轻量级的移动设备触控滑块的js框架，使用硬件加速过渡（如果该设备支持的话）。主要使用于移动端的网站、移动web apps，native apps和hybrid apps。主要是为IOS而设计的，同时，在Android、WP8系统也有着良好的用户体验，Swiper从3.0开始不再全面支持PC端。因此，如需在PC上兼容更多的浏览器，可以选择Swiper2.x（甚至支持IE7）。
 
