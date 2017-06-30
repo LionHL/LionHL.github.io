@@ -88,11 +88,11 @@ Hexo 提供了很多 theme 供你选择，在这我就不多做介绍了，自�
 在本地的 hexo 文件夹下执行
 
 ```npm 
-  git clone git@github.com:litten/hexo-theme-yilia.git themes/yalia
+  git clone git@github.com:litten/hexo-theme-yilia.git themes/yilia
 ```
 完成后你可以在本地themes下看见 yilia(自己定其他的名字) 主题包。然后在 _config.yml 文件里主题修改为 `theme: yilia`
 #### 修改头像
-打开 themes/yalia/_config.yml 文件，在 `#你的头像url  avatar: `后面添加一个url就行了。   
+打开 themes/yilia/_config.yml 文件，在 `#你的头像url  avatar: `后面添加一个url就行了。   
 （一些其他的设置也在这个文件里面修改，具体的可以自己查看）  
 在执行部署提交 `hexo g` `hexo d`
    
