@@ -1,7 +1,7 @@
 ---
 title: JavaScript中的遍历循环方法之map、forEach、for-in、for-of
 date: 2017-06-29 11:49:55
-tags: [map(),forEach(),for in(),for of()] 
+tags: [js] 
 ---
 
 ## map()

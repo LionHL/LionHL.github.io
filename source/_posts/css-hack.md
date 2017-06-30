@@ -1,7 +1,7 @@
 ---
 title: css-hack
 date: 2016-12-13 12:50:02
-tags: [前端,CssHack]
+tags: [css]
 ---
 
 # CSS Hack

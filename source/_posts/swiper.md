@@ -1,7 +1,7 @@
 ---
 title: Swiper
 date: 2016-12-01 10:29:11
-tags: [前端,swiper]
+tags: [swiper]
 ---
 
 最近在一个项目中使用了`Swiper`这个插件，就来分享一下。   
