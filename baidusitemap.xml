@@ -4,13 +4,36 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/10/18/mac-xcrun-error/</loc>
+    <lastmod>2017-06-30T08:40:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>mac-xcrun-error</title>
+        <pubTime>2016-10-18T06:00:50.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+        <tag>git</tag>
+         
+        <tag>mac</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/06/29/js-traversal/</loc>
-    <lastmod>2017-06-30T08:22:29.000Z</lastmod>
+    <lastmod>2017-06-30T08:40:03.000Z</lastmod>
     <data>
         <display>
         <title>JavaScript中的遍历循环方法之map、forEach、for-in、for-of</title>
         <pubTime>2017-06-29T03:49:55.000Z</pubTime>
         
+        <tag>笔记</tag>
+         
         <tag>js</tag>
          
          
@@ -21,31 +44,14 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/12/13/css-hack/</loc>
-    <lastmod>2017-06-30T08:20:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>css-hack</title>
-        <pubTime>2016-12-13T04:50:02.000Z</pubTime>
-        
-        <tag>css</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/10/01/hexo-github/</loc>
-    <lastmod>2017-06-30T08:20:32.000Z</lastmod>
+    <lastmod>2017-06-30T08:39:59.000Z</lastmod>
     <data>
         <display>
         <title>Hexo博客部署在GitHub上</title>
         <pubTime>2016-10-01T04:50:02.000Z</pubTime>
         
-        <tag>前端</tag>
+        <tag>笔记</tag>
          
         <tag>Hexo</tag>
          
@@ -60,13 +66,32 @@
     
   <url>
     <loc>http://yoursite.com/2017/03/13/git-branch/</loc>
-    <lastmod>2017-06-30T08:20:29.000Z</lastmod>
+    <lastmod>2017-06-30T08:39:51.000Z</lastmod>
     <data>
         <display>
         <title>git 分支操作</title>
         <pubTime>2017-03-13T06:35:58.000Z</pubTime>
         
+        <tag>笔记</tag>
+         
         <tag>git</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/12/13/css-hack/</loc>
+    <lastmod>2017-06-30T08:39:42.000Z</lastmod>
+    <data>
+        <display>
+        <title>css-hack</title>
+        <pubTime>2016-12-13T04:50:02.000Z</pubTime>
+        
+        <tag>笔记，css</tag>
          
          
            
@@ -84,25 +109,6 @@
         <pubTime>2016-12-01T02:29:11.000Z</pubTime>
         
         <tag>swiper</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/10/18/mac-xcrun-error/</loc>
-    <lastmod>2017-06-29T06:16:11.000Z</lastmod>
-    <data>
-        <display>
-        <title>mac-xcrun-error</title>
-        <pubTime>2016-10-18T06:00:50.000Z</pubTime>
-        
-        <tag>git</tag>
-         
-        <tag>mac</tag>
          
          
            
