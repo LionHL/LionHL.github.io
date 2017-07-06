@@ -4,6 +4,44 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/07/06/h5-meta/</loc>
+    <lastmod>2017-07-06T08:02:23.000Z</lastmod>
+    <data>
+        <display>
+        <title>h5-meta</title>
+        <pubTime>2017-07-06T07:58:22.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+        <tag>meta</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/12/13/css-hack/</loc>
+    <lastmod>2017-06-30T09:26:35.000Z</lastmod>
+    <data>
+        <display>
+        <title>css-hack</title>
+        <pubTime>2016-12-13T04:50:02.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+        <tag>css</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/10/18/mac-xcrun-error/</loc>
     <lastmod>2017-06-30T08:40:07.000Z</lastmod>
     <data>
@@ -75,23 +113,6 @@
         <tag>笔记</tag>
          
         <tag>git</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/12/13/css-hack/</loc>
-    <lastmod>2017-06-30T08:39:42.000Z</lastmod>
-    <data>
-        <display>
-        <title>css-hack</title>
-        <pubTime>2016-12-13T04:50:02.000Z</pubTime>
-        
-        <tag>笔记，css</tag>
          
          
            

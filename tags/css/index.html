@@ -6,21 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JavaScript中的遍历循环方法之map、forEach、for-in、for-of | LionHL</title>
+  <title>Tag: css | LionHL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="map()对数组的所有成员一次调用一个函数，根据函数结果返回一个新数组。   
-123456789101112var array = [1, 2, 3];array.map(function (n) &amp;#123;	return n + 1;&amp;#125;);// [2, 3, 4]array// [1, 2, 3]/* *	array数组所有成员都加上1，组成新数组，原数组没有变化 */">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript中的遍历循环方法之map、forEach、for-in、for-of">
-<meta property="og:url" content="http://yoursite.com/2017/06/29/js-traversal/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="LionHL">
+<meta property="og:url" content="http://yoursite.com/tags/css/index.html">
 <meta property="og:site_name" content="LionHL">
-<meta property="og:description" content="map()对数组的所有成员一次调用一个函数，根据函数结果返回一个新数组。   
-123456789101112var array = [1, 2, 3];array.map(function (n) &amp;#123;	return n + 1;&amp;#125;);// [2, 3, 4]array// [1, 2, 3]/* *	array数组所有成员都加上1，组成新数组，原数组没有变化 */">
-<meta property="og:updated_time" content="2017-06-30T08:40:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript中的遍历循环方法之map、forEach、for-in、for-of">
-<meta name="twitter:description" content="map()对数组的所有成员一次调用一个函数，根据函数结果返回一个新数组。   
-123456789101112var array = [1, 2, 3];array.map(function (n) &amp;#123;	return n + 1;&amp;#125;);// [2, 3, 4]array// [1, 2, 3]/* *	array数组所有成员都加上1，组成新数组，原数组没有变化 */">
+<meta name="twitter:title" content="LionHL">
   
     <link rel="alternative" href="/atom.xml" title="LionHL" type="application/atom+xml">
   
@@ -136,77 +129,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-js-traversal" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      JavaScript中的遍历循环方法之map、forEach、for-in、for-of
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2016/12/13/css-hack/" class="archive-article-date">
+  	<time datetime="2016-12-13T04:50:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2016/12/13/css-hack/">css-hack</a>
     </h1>
   
 
-        
-        <a href="/2017/06/29/js-traversal/" class="archive-article-date">
-  	<time datetime="2017-06-29T03:49:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h2><p>对数组的所有成员一次调用一个函数，根据函数结果返回一个新数组。   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var array = [1, 2, 3];</div><div class="line">array.map(function (n) &#123;</div><div class="line">	return n + 1;</div><div class="line">&#125;);</div><div class="line">// [2, 3, 4]</div><div class="line"></div><div class="line">array</div><div class="line">// [1, 2, 3]</div><div class="line"></div><div class="line">/*</div><div class="line"> *	array数组所有成员都加上1，组成新数组，原数组没有变化</div><div class="line"> */</div></pre></td></tr></table></figure>
-<a id="more"></a> 
-<p><code>map</code>方法接收一个函数作为参数。调用时传入三个参数，分别是当前成员、当前位置和数组本身。    </p>
-<p>语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var new_array = arr.map(function callback(currentValue, index, array) &#123;</div><div class="line">    // Return element for new_array</div><div class="line">&#125;[, thisArg])</div><div class="line"></div><div class="line">// thisArg 可选的。执行 callback 函数时 使用的this 值</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;];</div><div class="line">[1, 2].map(function (e) &#123;</div><div class="line">	return this[e];</div><div class="line">&#125;, arr)</div><div class="line">// [&apos;b&apos;, &apos;c&apos;]</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[1, 2, 3].map(function (elem, index, arr) &#123;</div><div class="line">	return elem * index;</div><div class="line">&#125;);</div><div class="line">//	[0, 2, 6]</div></pre></td></tr></table></figure>
-<p><code>map</code>方法还可以用于字符串，用来遍历字符串的每个字符。但不能直接使用，要通过函数的<code>call</code>方法间接使用，或者先转为数组，然后使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var upper = function (x) &#123;</div><div class="line">	return x.toUpperCase();</div><div class="line">&#125;;</div><div class="line"></div><div class="line">[].map.call(&apos;abc&apos;, upper)</div><div class="line">// [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div><div class="line"></div><div class="line">// 或者</div><div class="line">&apos;abc&apos;.split(&apos;&apos;).map(upper)</div><div class="line">// [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div><div class="line"> </div><div class="line"> </div><div class="line">// 反转字符串：</div><div class="line">var str = &apos;12345&apos;;</div><div class="line">Array.prototype.map.call(str, function(x) &#123;</div><div class="line">	return x;</div><div class="line">&#125;).reverse().join(&apos;&apos;);</div><div class="line">// &apos;54321&apos;</div></pre></td></tr></table></figure>
-<p>如果数组有空位，<code>map</code>方法的回调函数在这个位置不会执行，会跳过数组的空位。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var f = function(n) &#123; return n + 1 &#125;;</div><div class="line"></div><div class="line">[1, undefined, 2].map(f)	// [2, NaN, 3]</div><div class="line">[1, null, 2].map(f)			// [2, 1, 3]</div><div class="line">[1,  , 2].map(f)				// [2,  , 3]</div></pre></td></tr></table></figure>
-<p><br></p>
-<h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h2><p><code>forEach</code>与<code>map</code>方法相似，遍历数组所有成员，执行某种操作，但不返回值。   </p>
-<p><code>forEach</code>方法接收一个函数作为参数。调用时传入三个参数，分别是当前成员、当前位置和数组本身。语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">array.forEach(callback(currentValue, index, array) &#123;</div><div class="line">	// do something</div><div class="line">&#125;, this)</div><div class="line"></div><div class="line">array.forEach(callback[, thisArg])</div><div class="line"></div><div class="line">// thisArg 可选参数。当执行回调 函数时用作this的值(参考对象)。</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function log(element, index, array) &#123;</div><div class="line">	console.log(&apos;[&apos; + index + &apos;] = &apos; + element);</div><div class="line">&#125;</div><div class="line"></div><div class="line">[2, 5, 9].forEach(log);</div><div class="line">// [0] = 2</div><div class="line">// [1] = 5</div><div class="line">// [3] = 9</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 接受第二个参数，用来绑定回调函数的 this 关键字</div><div class="line">var out = [];</div><div class="line"></div><div class="line">[1, 2, 3].forEach(function(elem) &#123;</div><div class="line">	this.push(elem * elem);</div><div class="line">&#125;, out);</div><div class="line"></div><div class="line">out		// [1, 4, 9]</div></pre></td></tr></table></figure>
-<p><code>forEach</code>会跳过数组的空位   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var log = function (n) &#123; console.log(n + 1); &#125;;</div><div class="line"></div><div class="line">[1, undefined, 2].forEach(log)	</div><div class="line">// 2</div><div class="line">// NaN</div><div class="line">// 3</div><div class="line"></div><div class="line">[1, null, 2].forEach(log)</div><div class="line">// 2</div><div class="line">// 1</div><div class="line">// 3</div><div class="line"></div><div class="line">[1,  , 2].forEach(log)</div><div class="line">// 2</div><div class="line">// 3</div></pre></td></tr></table></figure>
-<p>注：<code>forEach</code>方法无法中断执行，会将所有成员遍历完。如果想符合某种条件中断遍历，使用<code>for</code>循环。   </p>
-<p><code>forEach</code>也可用于类似数组的对象和字符串。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">	0: 1,</div><div class="line">	a: &apos;hello&apos;,</div><div class="line">	length: 1</div><div class="line">&#125;</div><div class="line"></div><div class="line">Array.prototype.forEach.call(obj, function (elem, i) &#123;</div><div class="line">	console.log(i + &apos;:&apos; + elem);</div><div class="line">&#125;);</div><div class="line">// 0:1</div><div class="line"></div><div class="line">// obj是一个类似数组的对象，forEach方法可以遍历它的数字键</div><div class="line"></div><div class="line">var str = &apos;hello&apos;;</div><div class="line">Array.prototype.forEach.call(str, function (elem, i) &#123;</div><div class="line">	console.log(i + &apos;:&apos; + elem);</div><div class="line">&#125;);</div><div class="line">// 0:h</div><div class="line">// 1:e</div><div class="line">// 2:l</div><div class="line">// 3:l</div><div class="line">// 4:o</div></pre></td></tr></table></figure>
-<p><br></p>
-<h2 id="for-in"><a href="#for-in" class="headerlink" title="for in"></a>for in</h2><p><code>for-in</code>循环实际是为循环<code>enumerable</code>对象而设计的，一般不推荐循环数组</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">	a: 1,</div><div class="line">	b: 2,</div><div class="line">	c: 3</div><div class="line">&#125;</div><div class="line"></div><div class="line">for (var prop in obj) &#123;</div><div class="line">	console.log(&apos;obj.&apos; + prop + &apos; = &apos; + obj[prop]);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">// obj.a = 1</div><div class="line">// obj.b = 2</div><div class="line">// obj.c = 3</div><div class="line"></div><div class="line">/* 循环数组 */</div><div class="line">fof (var i in maArray) &#123;			// 不推荐</div><div class="line">	console.log(myArray[index]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><br></p>
-<h2 id="for-of"><a href="#for-of" class="headerlink" title="for of"></a>for of</h2><p>语法：   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for (variable of object) &#123;</div><div class="line">	statment</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>遍历Array:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var array = [10, 20, 30];</div><div class="line">for (let value of array) &#123;</div><div class="line">	console.log(value);</div><div class="line">&#125;</div><div class="line">// 10</div><div class="line">// 20</div><div class="line">// 30</div></pre></td></tr></table></figure>
-<p>遍历String：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let it = &apos;boo&apos;;</div><div class="line">for (let value of it) &#123;</div><div class="line">	console.log(value);</div><div class="line">&#125;</div><div class="line">// b</div><div class="line">// o</div><div class="line">// o</div></pre></td></tr></table></figure>
-<p>遍历DOM集合：   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 给每个article标签的p子标签添加一个‘read’ class</div><div class="line"></div><div class="line">let articleParagrahs = documment.querySelectorAll(&apos;article &gt; p&apos;);</div><div class="line"></div><div class="line">for (let paragrahs of articleParagraphs) &#123;</div><div class="line">	paragrahs.classList.add(&apos;read&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>遍历生成器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function* fibonacci() &#123;		// 一个生成器函数</div><div class="line">	let [prev, curr] = [0, 1];</div><div class="line">	for (;;) &#123;</div><div class="line">		[prev, curr] = [curr, prev + curr];</div><div class="line">		yield curr;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">for (let n of fibonacci()) &#123;</div><div class="line">	if (n &gt; 1000)</div><div class="line">		break;</div><div class="line">	console.log(n);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><br></p>
-<hr>
-<p><br></p>
-<h2 id="for-of-与-for-in的区别"><a href="#for-of-与-for-in的区别" class="headerlink" title="for of 与 for in的区别"></a>for of 与 for in的区别</h2><p>for in循环会遍历一个object所有的可枚举属性。<br>for of是为了各种collection对象专门定制的，并不适用于所有的object。它会议这种方式迭代出任何拥有[Symbol.iterator]属性的collection对象的每个元素。   </p>
-<p>for in 遍历（当前对象及原型上的）每个元素属性名称<br>for of 遍历（当前对象上的）每一个属性值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Object.prototype.objCustom = function () &#123;&#125;;</div><div class="line">Array.prototype.arrCustom = function () &#123;&#125;;</div><div class="line"></div><div class="line">let it = [3, 5, 7];</div><div class="line">it.foo = &apos;hello&apos;;</div><div class="line"></div><div class="line">for (let i in it) &#123;</div><div class="line">	console.log(i);		// logs 0, 1, 2, &apos;foo&apos;, &apos;arrCustom&apos;, &apos;objCustom&apos;</div><div class="line">&#125;</div><div class="line"></div><div class="line">for (let i of it) &#123;</div><div class="line">	console.log(i);		// logs 3, 5, 7</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -216,120 +168,25 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3aS47bMBAFwLn/pZ1tAkSa95qaBCJLK8MWJJYXjf59fcXX5/a6v//3b65+vf/+sQsDA+O1jOSIybGunnz/lqtf678PAwPjAEZyiPtXJr/mpPxsGBgYGE/dk6d9GBgYGE8xkhCZp5j/LeBiYGC8ipGna215uRKUf6QWx8DAeCEj77r/+88/Mt/AwMB4FeNTXu3rZ4lgfSoMDIytGXmAm402H2ulBcscGBgYuzLWw2Wboa2H7L/ciYGBcQAjD3yzBYu2bdcmkRgYGHszVg7dtuTaJtpwAICBgbEdY70cnY0bE2Qx7MTAwDiAMSsyZ+D1sBtti2BgYGzEaBv3eRGbB9yVZYvLOzEwMA5g5MsQeRW5nmgWJS4GBsZGjJWGWl5qtqsb9ZMxMDAOY8wWLJ4N3PmfhYGBcQ4jLyzzJK+dLbYJ6B/fYGBgbM1oASstttnwsgj0GBgYWzPy1v+scG3D9PrTMDAw9mPMEsTZUe5Dc4vBwMA4jZG8oD3ErAGXjBAui1gMDIytGXmjbbZm0Q4D6sQRAwPjYEYSLvNG2CxYR8/HwMDYlPEpr/wFs5FnTi1yWwwMjJcz8qstbvMwnQ8h6nUxDAyMjRhtKy3BtGH3gfQRAwPjAEaS6s3WMlbGoku1OAYGBkaZb64f95vgi4GBgREngu1qRd7I+6YJiIGBcQBjthbWstuDFuEbAwNja8ZKojYbec4OsbKigYGB8VrGL8i2k2HmuX58AAAAAElFTkSuQmCC" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/07/06/h5-meta/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          h5-meta
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/03/13/git-branch/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git 分支操作</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-    <section id="comments">
-      <div id="disqus_thread"></div>
-        <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'lionhl'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
-  
+    
 
 
           </div>
@@ -352,9 +209,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

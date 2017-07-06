@@ -6,21 +6,60 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>JavaScript中的遍历循环方法之map、forEach、for-in、for-of | LionHL</title>
+  <title>h5-meta | LionHL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="map()对数组的所有成员一次调用一个函数，根据函数结果返回一个新数组。   
-123456789101112var array = [1, 2, 3];array.map(function (n) &amp;#123;	return n + 1;&amp;#125;);// [2, 3, 4]array// [1, 2, 3]/* *	array数组所有成员都加上1，组成新数组，原数组没有变化 */">
+  <meta name="description" content="meta标签的作用搜索引擎优化（SEO），定义页面使用语言，自动刷新并指向新的页面，实现页面转换时的动态效果，控制页面缓冲，网页定级评论，控制网页显示的窗口等
+meta标签的组成meta主要有两个属性，分别是http-equiv属性和name属性，
+
+
+
+属性
+值
+描述
+
+
+
+
+http-equiv
+content-typeexpiresrefreshset-cookie
+把 content 属性">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript中的遍历循环方法之map、forEach、for-in、for-of">
-<meta property="og:url" content="http://yoursite.com/2017/06/29/js-traversal/index.html">
+<meta property="og:title" content="h5-meta">
+<meta property="og:url" content="http://yoursite.com/2017/07/06/h5-meta/index.html">
 <meta property="og:site_name" content="LionHL">
-<meta property="og:description" content="map()对数组的所有成员一次调用一个函数，根据函数结果返回一个新数组。   
-123456789101112var array = [1, 2, 3];array.map(function (n) &amp;#123;	return n + 1;&amp;#125;);// [2, 3, 4]array// [1, 2, 3]/* *	array数组所有成员都加上1，组成新数组，原数组没有变化 */">
-<meta property="og:updated_time" content="2017-06-30T08:40:03.000Z">
+<meta property="og:description" content="meta标签的作用搜索引擎优化（SEO），定义页面使用语言，自动刷新并指向新的页面，实现页面转换时的动态效果，控制页面缓冲，网页定级评论，控制网页显示的窗口等
+meta标签的组成meta主要有两个属性，分别是http-equiv属性和name属性，
+
+
+
+属性
+值
+描述
+
+
+
+
+http-equiv
+content-typeexpiresrefreshset-cookie
+把 content 属性">
+<meta property="og:updated_time" content="2017-07-06T08:02:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript中的遍历循环方法之map、forEach、for-in、for-of">
-<meta name="twitter:description" content="map()对数组的所有成员一次调用一个函数，根据函数结果返回一个新数组。   
-123456789101112var array = [1, 2, 3];array.map(function (n) &amp;#123;	return n + 1;&amp;#125;);// [2, 3, 4]array// [1, 2, 3]/* *	array数组所有成员都加上1，组成新数组，原数组没有变化 */">
+<meta name="twitter:title" content="h5-meta">
+<meta name="twitter:description" content="meta标签的作用搜索引擎优化（SEO），定义页面使用语言，自动刷新并指向新的页面，实现页面转换时的动态效果，控制页面缓冲，网页定级评论，控制网页显示的窗口等
+meta标签的组成meta主要有两个属性，分别是http-equiv属性和name属性，
+
+
+
+属性
+值
+描述
+
+
+
+
+http-equiv
+content-typeexpiresrefreshset-cookie
+把 content 属性">
   
     <link rel="alternative" href="/atom.xml" title="LionHL" type="application/atom+xml">
   
@@ -136,69 +175,81 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-js-traversal" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-h5-meta" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      JavaScript中的遍历循环方法之map、forEach、for-in、for-of
+      h5-meta
     </h1>
   
 
         
-        <a href="/2017/06/29/js-traversal/" class="archive-article-date">
-  	<time datetime="2017-06-29T03:49:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-29</time>
+        <a href="/2017/07/06/h5-meta/" class="archive-article-date">
+  	<time datetime="2017-07-06T07:58:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h2><p>对数组的所有成员一次调用一个函数，根据函数结果返回一个新数组。   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">var array = [1, 2, 3];</div><div class="line">array.map(function (n) &#123;</div><div class="line">	return n + 1;</div><div class="line">&#125;);</div><div class="line">// [2, 3, 4]</div><div class="line"></div><div class="line">array</div><div class="line">// [1, 2, 3]</div><div class="line"></div><div class="line">/*</div><div class="line"> *	array数组所有成员都加上1，组成新数组，原数组没有变化</div><div class="line"> */</div></pre></td></tr></table></figure>
-<a id="more"></a> 
-<p><code>map</code>方法接收一个函数作为参数。调用时传入三个参数，分别是当前成员、当前位置和数组本身。    </p>
-<p>语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var new_array = arr.map(function callback(currentValue, index, array) &#123;</div><div class="line">    // Return element for new_array</div><div class="line">&#125;[, thisArg])</div><div class="line"></div><div class="line">// thisArg 可选的。执行 callback 函数时 使用的this 值</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var arr = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;];</div><div class="line">[1, 2].map(function (e) &#123;</div><div class="line">	return this[e];</div><div class="line">&#125;, arr)</div><div class="line">// [&apos;b&apos;, &apos;c&apos;]</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[1, 2, 3].map(function (elem, index, arr) &#123;</div><div class="line">	return elem * index;</div><div class="line">&#125;);</div><div class="line">//	[0, 2, 6]</div></pre></td></tr></table></figure>
-<p><code>map</code>方法还可以用于字符串，用来遍历字符串的每个字符。但不能直接使用，要通过函数的<code>call</code>方法间接使用，或者先转为数组，然后使用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var upper = function (x) &#123;</div><div class="line">	return x.toUpperCase();</div><div class="line">&#125;;</div><div class="line"></div><div class="line">[].map.call(&apos;abc&apos;, upper)</div><div class="line">// [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div><div class="line"></div><div class="line">// 或者</div><div class="line">&apos;abc&apos;.split(&apos;&apos;).map(upper)</div><div class="line">// [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;]</div><div class="line"> </div><div class="line"> </div><div class="line">// 反转字符串：</div><div class="line">var str = &apos;12345&apos;;</div><div class="line">Array.prototype.map.call(str, function(x) &#123;</div><div class="line">	return x;</div><div class="line">&#125;).reverse().join(&apos;&apos;);</div><div class="line">// &apos;54321&apos;</div></pre></td></tr></table></figure>
-<p>如果数组有空位，<code>map</code>方法的回调函数在这个位置不会执行，会跳过数组的空位。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var f = function(n) &#123; return n + 1 &#125;;</div><div class="line"></div><div class="line">[1, undefined, 2].map(f)	// [2, NaN, 3]</div><div class="line">[1, null, 2].map(f)			// [2, 1, 3]</div><div class="line">[1,  , 2].map(f)				// [2,  , 3]</div></pre></td></tr></table></figure>
+        <h1 id="meta标签的作用"><a href="#meta标签的作用" class="headerlink" title="meta标签的作用"></a>meta标签的作用</h1><p>搜索引擎优化（SEO），定义页面使用语言，自动刷新并指向新的页面，实现页面转换时的动态效果，控制页面缓冲，网页定级评论，控制网页显示的窗口等</p>
+<h1 id="meta标签的组成"><a href="#meta标签的组成" class="headerlink" title="meta标签的组成"></a>meta标签的组成</h1><p>meta主要有两个属性，分别是http-equiv属性和name属性，</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">http-equiv</td>
+<td style="text-align:left">content-type<br>expires<br>refresh<br>set-cookie</td>
+<td style="text-align:left">把 content 属性关联到 HTTP 头部。</td>
+</tr>
+<tr>
+<td style="text-align:left">name</td>
+<td style="text-align:left">author<br>description<br>keywords<br>generator<br>revised<br>others</td>
+<td style="text-align:left">把 content 属性关联到一个名称。</td>
+</tr>
+<tr>
+<td style="text-align:left">scheme</td>
+<td style="text-align:left">some_text</td>
+<td style="text-align:left">定义用于翻译 content 属性值的格式。</td>
+</tr>
+</tbody>
+</table>
 <p><br></p>
-<h2 id="forEach"><a href="#forEach" class="headerlink" title="forEach()"></a>forEach()</h2><p><code>forEach</code>与<code>map</code>方法相似，遍历数组所有成员，执行某种操作，但不返回值。   </p>
-<p><code>forEach</code>方法接收一个函数作为参数。调用时传入三个参数，分别是当前成员、当前位置和数组本身。语法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">array.forEach(callback(currentValue, index, array) &#123;</div><div class="line">	// do something</div><div class="line">&#125;, this)</div><div class="line"></div><div class="line">array.forEach(callback[, thisArg])</div><div class="line"></div><div class="line">// thisArg 可选参数。当执行回调 函数时用作this的值(参考对象)。</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function log(element, index, array) &#123;</div><div class="line">	console.log(&apos;[&apos; + index + &apos;] = &apos; + element);</div><div class="line">&#125;</div><div class="line"></div><div class="line">[2, 5, 9].forEach(log);</div><div class="line">// [0] = 2</div><div class="line">// [1] = 5</div><div class="line">// [3] = 9</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 接受第二个参数，用来绑定回调函数的 this 关键字</div><div class="line">var out = [];</div><div class="line"></div><div class="line">[1, 2, 3].forEach(function(elem) &#123;</div><div class="line">	this.push(elem * elem);</div><div class="line">&#125;, out);</div><div class="line"></div><div class="line">out		// [1, 4, 9]</div></pre></td></tr></table></figure>
-<p><code>forEach</code>会跳过数组的空位   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var log = function (n) &#123; console.log(n + 1); &#125;;</div><div class="line"></div><div class="line">[1, undefined, 2].forEach(log)	</div><div class="line">// 2</div><div class="line">// NaN</div><div class="line">// 3</div><div class="line"></div><div class="line">[1, null, 2].forEach(log)</div><div class="line">// 2</div><div class="line">// 1</div><div class="line">// 3</div><div class="line"></div><div class="line">[1,  , 2].forEach(log)</div><div class="line">// 2</div><div class="line">// 3</div></pre></td></tr></table></figure>
-<p>注：<code>forEach</code>方法无法中断执行，会将所有成员遍历完。如果想符合某种条件中断遍历，使用<code>for</code>循环。   </p>
-<p><code>forEach</code>也可用于类似数组的对象和字符串。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">	0: 1,</div><div class="line">	a: &apos;hello&apos;,</div><div class="line">	length: 1</div><div class="line">&#125;</div><div class="line"></div><div class="line">Array.prototype.forEach.call(obj, function (elem, i) &#123;</div><div class="line">	console.log(i + &apos;:&apos; + elem);</div><div class="line">&#125;);</div><div class="line">// 0:1</div><div class="line"></div><div class="line">// obj是一个类似数组的对象，forEach方法可以遍历它的数字键</div><div class="line"></div><div class="line">var str = &apos;hello&apos;;</div><div class="line">Array.prototype.forEach.call(str, function (elem, i) &#123;</div><div class="line">	console.log(i + &apos;:&apos; + elem);</div><div class="line">&#125;);</div><div class="line">// 0:h</div><div class="line">// 1:e</div><div class="line">// 2:l</div><div class="line">// 3:l</div><div class="line">// 4:o</div></pre></td></tr></table></figure>
-<p><br></p>
-<h2 id="for-in"><a href="#for-in" class="headerlink" title="for in"></a>for in</h2><p><code>for-in</code>循环实际是为循环<code>enumerable</code>对象而设计的，一般不推荐循环数组</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">	a: 1,</div><div class="line">	b: 2,</div><div class="line">	c: 3</div><div class="line">&#125;</div><div class="line"></div><div class="line">for (var prop in obj) &#123;</div><div class="line">	console.log(&apos;obj.&apos; + prop + &apos; = &apos; + obj[prop]);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">// obj.a = 1</div><div class="line">// obj.b = 2</div><div class="line">// obj.c = 3</div><div class="line"></div><div class="line">/* 循环数组 */</div><div class="line">fof (var i in maArray) &#123;			// 不推荐</div><div class="line">	console.log(myArray[index]);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><br></p>
-<h2 id="for-of"><a href="#for-of" class="headerlink" title="for of"></a>for of</h2><p>语法：   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">for (variable of object) &#123;</div><div class="line">	statment</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>遍历Array:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var array = [10, 20, 30];</div><div class="line">for (let value of array) &#123;</div><div class="line">	console.log(value);</div><div class="line">&#125;</div><div class="line">// 10</div><div class="line">// 20</div><div class="line">// 30</div></pre></td></tr></table></figure>
-<p>遍历String：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">let it = &apos;boo&apos;;</div><div class="line">for (let value of it) &#123;</div><div class="line">	console.log(value);</div><div class="line">&#125;</div><div class="line">// b</div><div class="line">// o</div><div class="line">// o</div></pre></td></tr></table></figure>
-<p>遍历DOM集合：   </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 给每个article标签的p子标签添加一个‘read’ class</div><div class="line"></div><div class="line">let articleParagrahs = documment.querySelectorAll(&apos;article &gt; p&apos;);</div><div class="line"></div><div class="line">for (let paragrahs of articleParagraphs) &#123;</div><div class="line">	paragrahs.classList.add(&apos;read&apos;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>遍历生成器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function* fibonacci() &#123;		// 一个生成器函数</div><div class="line">	let [prev, curr] = [0, 1];</div><div class="line">	for (;;) &#123;</div><div class="line">		[prev, curr] = [curr, prev + curr];</div><div class="line">		yield curr;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">for (let n of fibonacci()) &#123;</div><div class="line">	if (n &gt; 1000)</div><div class="line">		break;</div><div class="line">	console.log(n);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="H5常用meta设置"><a href="#H5常用meta设置" class="headerlink" title="H5常用meta设置"></a>H5常用meta设置</h1><h2 id="viewport"><a href="#viewport" class="headerlink" title="viewport"></a>viewport</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; </div><div class="line">	content=&quot;width=device-width,</div><div class="line">			height=device-height,</div><div class="line">			initial-scale=1.0, </div><div class="line">			minimum-scale=1.0, </div><div class="line">			maximum-scale=1.0, </div><div class="line">			user-scalable=no&quot;&gt;</div></pre></td></tr></table></figure>
+<p><b>width = [pixel_value | device-width]</b><br>控制viewport的大小，可以指定一个值或者特殊的值，如device-width为设备的宽度（单位为缩放为100%是的CSS的像素）。   </p>
+<p><b>height = [pixel_value | device-height]</b><br>和width相对应，指定高度。</p>
+<p><b>initial-scale = float_value </b><br>初始缩放。即页面初始缩放程度。为浮点值，是页面大小的一个乘数。例如，如果你设置初始缩放为‘1.0’，那么，web页面在展示的时候就会以target density分辨率的1:1来展现。如果设置为‘2.0’，那么这个页面就会放大为2倍。   </p>
+<p><b>maximum-scale = float_value</b><br>最大缩放。即允许的最大缩放程度。浮点值，用以指出页面大小与屏幕大小相比的最大乘数。例如，将值设置为‘2.0’，那么页面与target size相比，最多能放大2倍。</p>
+<p><b>user-scalable = [yes | no]</b><br>用户调整缩放。即用户能否改变页面缩放程度。如果设置为yes，表示允许用户对其改变，反之为no。默认值为yes。如果设置为no，那么mininum-scale和maximum-scale都将被忽略，因为根本不可能缩放。</p>
+<p>所有的缩放值都必须在0.01 - 10的范围之内。</p>
+<p>安卓中还支持<code>target-densitydpi</code>这个私有属性，它表示目标设备的密度等级，作用是觉得css中的1px代表多少物理像素<br><b>target-densitydpi = [high-dpi | medium-dpi | low-dpi | device-dpi]</b><br>当<code>target-densitydpi=device-dpi</code>时，css中的1px会等于物理像素中的1px。<br>因为这个属性只有安卓支持，并且安卓已经决定要废弃这个属性了，所以这个属性我们要避免使用。</p>
 <p><br></p>
 <hr>
+<h2 id="IOS设备："><a href="#IOS设备：" class="headerlink" title="IOS设备："></a>IOS设备：</h2><h2 id="format-detection"><a href="#format-detection" class="headerlink" title="format-detection"></a>format-detection</h2><p>用来检测html里的一些格式。主要属性设置有：   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no,email=no,adress=no&quot;&gt;</div></pre></td></tr></table></figure>
+<p><b>telephone:</b><br>使设备浏览网页时对数字不启用电话功能（不同设备结束不同，iTouch点击数字存入为联系人，iPhone手机上为拨号的超链接），忽略将页面中的数字识别为电话号码。<code>telephone=no</code>就禁止了把数字转化为拨号链接。需启用电话功能将<code>telephone=yes</code>即可，若在页面上面有 Google Maps, iTunes 和 YouTube 的链接会在ios设备上打开相应的程序组件。</p>
+<p><b>email</b><br>告诉设备不识别邮箱，点击之后不自动发送。<code>email=no</code>禁止作为邮箱地址。默认开启。</p>
+<p><b>adress</b><br><code>adress=no</code>禁止跳转至地图！默认开启。</p>
+<h2 id="apple-mobile-web-app-capable"><a href="#apple-mobile-web-app-capable" class="headerlink" title="apple-mobile-web-app-capable"></a>apple-mobile-web-app-capable</h2><p>是否启用 WebApp 全屏模式，删除默认的苹果工具栏和菜单栏。content有两个值‘yes’和‘no’。当需要显示时meta就不用加了，默认就是显示。   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;</div></pre></td></tr></table></figure>
+<h2 id="apple-mobile-web-app-status-bar-style"><a href="#apple-mobile-web-app-status-bar-style" class="headerlink" title="apple-mobile-web-app-status-bar-style"></a>apple-mobile-web-app-status-bar-style</h2><p>控制状态栏显示样式（当启动webapp功能时，显示手机信号、时、电池的顶部导航栏的颜色）。默认为default(白色)，可以定为black(黑色)和black-translucent(灰色半透明)。</p>
+<p>在iOS中有两个meta值，apple-mobile-web-app-capable和apple-mobile-web-app-status-bar-style，这两个会让网页内容以应用程序风格显示，并使状态栏透明。</p>
+<h2 id="apple-mobile-web-app-title"><a href="#apple-mobile-web-app-title" class="headerlink" title="apple-mobile-web-app-title"></a>apple-mobile-web-app-title</h2><p>添加到主屏后的标题（iOS 6 新增）   </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;标题&quot;&gt;</div></pre></td></tr></table></figure>
+<h2 id="apple-itunes-app"><a href="#apple-itunes-app" class="headerlink" title="apple-itunes-app"></a>apple-itunes-app</h2><p>添加智能 App 广告条 Smart App Banner（ios 6+ Safari）:告诉浏览器这个网站对应的app，并在页面上显示下载banner</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;apple-itunes-app&quot; content=&quot;app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL&quot;&gt;</div></pre></td></tr></table></figure>
 <p><br></p>
-<h2 id="for-of-与-for-in的区别"><a href="#for-of-与-for-in的区别" class="headerlink" title="for of 与 for in的区别"></a>for of 与 for in的区别</h2><p>for in循环会遍历一个object所有的可枚举属性。<br>for of是为了各种collection对象专门定制的，并不适用于所有的object。它会议这种方式迭代出任何拥有[Symbol.iterator]属性的collection对象的每个元素。   </p>
-<p>for in 遍历（当前对象及原型上的）每个元素属性名称<br>for of 遍历（当前对象上的）每一个属性值：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">Object.prototype.objCustom = function () &#123;&#125;;</div><div class="line">Array.prototype.arrCustom = function () &#123;&#125;;</div><div class="line"></div><div class="line">let it = [3, 5, 7];</div><div class="line">it.foo = &apos;hello&apos;;</div><div class="line"></div><div class="line">for (let i in it) &#123;</div><div class="line">	console.log(i);		// logs 0, 1, 2, &apos;foo&apos;, &apos;arrCustom&apos;, &apos;objCustom&apos;</div><div class="line">&#125;</div><div class="line"></div><div class="line">for (let i of it) &#123;</div><div class="line">	console.log(i);		// logs 3, 5, 7</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 针对手持设备优化，主要针对一些老的不识别viewport的浏览器，比如黑莓 --&gt;</div><div class="line">&lt;meta name=&quot;HandheldFriendly&quot; content=&quot;true&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- 微软的老式浏览器 --&gt;</div><div class="line">&lt;meta name=&quot;MobileOptimized&quot; content=&quot;320&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- UC强制竖屏 --&gt;</div><div class="line">&lt;meta name=&quot;screen-orientation&quot; content=&quot;portrait&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- QQ强制竖屏 --&gt;</div><div class="line">&lt;meta name=&quot;x5-orientation&quot; content=&quot;portrait&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- UC强制全屏 --&gt;</div><div class="line">&lt;meta name=&quot;full-screen&quot; content=&quot;yes&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- QQ强制全屏 --&gt;</div><div class="line">&lt;meta name=&quot;x5-fullscreen&quot; content=&quot;true&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- UC应用模式 --&gt;</div><div class="line">&lt;meta name=&quot;browsermode&quot; content=&quot;application&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- QQ应用模式 --&gt;</div><div class="line">&lt;meta name=&quot;x5-page-mode&quot; content=&quot;app&quot;&gt;</div><div class="line"></div><div class="line">&lt;!-- windowsphone点击无高光--&gt;</div><div class="line">&lt;meta name=&quot;msapplication-tap-highlight&quot; content=&quot;no&quot;&gt;</div></pre></td></tr></table></figure>
 
       
 
@@ -216,7 +267,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">meta</a>
         		</li>
       		
 		</ul>
@@ -272,7 +323,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3aS47bMBAFwLn/pZ1tAkSa95qaBCJLK8MWJJYXjf59fcXX5/a6v//3b65+vf/+sQsDA+O1jOSIybGunnz/lqtf678PAwPjAEZyiPtXJr/mpPxsGBgYGE/dk6d9GBgYGE8xkhCZp5j/LeBiYGC8ipGna215uRKUf6QWx8DAeCEj77r/+88/Mt/AwMB4FeNTXu3rZ4lgfSoMDIytGXmAm402H2ulBcscGBgYuzLWw2Wboa2H7L/ciYGBcQAjD3yzBYu2bdcmkRgYGHszVg7dtuTaJtpwAICBgbEdY70cnY0bE2Qx7MTAwDiAMSsyZ+D1sBtti2BgYGzEaBv3eRGbB9yVZYvLOzEwMA5g5MsQeRW5nmgWJS4GBsZGjJWGWl5qtqsb9ZMxMDAOY8wWLJ4N3PmfhYGBcQ4jLyzzJK+dLbYJ6B/fYGBgbM1oASstttnwsgj0GBgYWzPy1v+scG3D9PrTMDAw9mPMEsTZUe5Dc4vBwMA4jZG8oD3ErAGXjBAui1gMDIytGXmjbbZm0Q4D6sQRAwPjYEYSLvNG2CxYR8/HwMDYlPEpr/wFs5FnTi1yWwwMjJcz8qstbvMwnQ8h6nUxDAyMjRhtKy3BtGH3gfQRAwPjAEaS6s3WMlbGoku1OAYGBkaZb64f95vgi4GBgREngu1qRd7I+6YJiIGBcQBjthbWstuDFuEbAwNja8ZKojYbec4OsbKigYGB8VrGL8i2k2HmuX58AAAAAElFTkSuQmCC" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByElEQVR42u3ay4oCQQwFUP//px2Y1YB0e1Op1CicWom07alNyOvxiM/z97x+vnry73n9PnlP6+Di4ra5z9tz9Wf5larvv3oGFxf3PLcavJIwlL8hMeDi4n4mNw9w1RQHFxf327n5b3Fxcb+dmxQn1SJnrWmyrVbDxcVtcDsN012fD/V3cXFx21OJ/FRZi/+Ci4t7hFtNU5I/XuMWBrG4uLjD3HyRIr99v8lSHq/i4uJu5XZWKNaaHf3QiYuLe5JbXcbqFD9rhRAuLu4Zbj/JSALQ2hjmTUMEFxd3jJu3PJLvJ5Y2olwMFxd3jFuokOLrVVl5goWLizvH7TdMq7/K05qo+MHFxR3gVkuaZHySj16SJwtxFxcXdxO3sz51/0z/2oU5Dy4u7lbuRHjqr3G0Gqa4uLhtbnKPajirjmQKAxVcXNwj3GrDNH/R2ipGnn7h4uLOcddaltUUpxPs3qQ4uLi4A9y1DYf+sCQvrnBxcf+L2y9v1tqg96w3/RtcXNwj3Grw6q9nJcnQZSDDxcX9MO7eIWs+wsHFxf1Mbr68tRa2NnRzcXFxt3L7TdL7wFS9XmEJAxcXd4BbbZjm4ax6yTw9wsXFHeP+AJaFBhyl3WNPAAAAAElFTkSuQmCC" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,18 +337,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/07/06/h5-meta/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          h5-meta
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/13/git-branch/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git 分支操作</div>
+    <a href="/2017/06/29/js-traversal/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript中的遍历循环方法之map、forEach、for-in、for-of</div>
       <i class="icon-circle-right"></i>
     </a>
   
