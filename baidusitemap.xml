@@ -4,6 +4,27 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/07/12/170712/</loc>
+    <lastmod>2017-07-12T06:18:38.000Z</lastmod>
+    <data>
+        <display>
+        <title>DOM元素捕获和冒泡都绑定了，触发几次？执行顺序如何？</title>
+        <pubTime>2017-07-12T03:28:27.000Z</pubTime>
+        
+        <tag>笔记</tag>
+         
+        <tag>javascript</tag>
+         
+        <tag>DOM2事件</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2017/07/07/inherit/</loc>
     <lastmod>2017-07-07T03:11:27.000Z</lastmod>
     <data>

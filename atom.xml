@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-07T03:11:27.000Z</updated>
+  <updated>2017-07-12T06:18:38.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,44 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DOM元素捕获和冒泡都绑定了，触发几次？执行顺序如何？</title>
+    <link href="http://yoursite.com/2017/07/12/170712/"/>
+    <id>http://yoursite.com/2017/07/12/170712/</id>
+    <published>2017-07-12T03:28:27.000Z</published>
+    <updated>2017-07-12T06:18:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近看见一个题目，一个元素如果捕获和冒泡都绑定了，事件会触发几次，执行顺序如何？<br>没有想到答案，感觉知识匮乏，技术太差怎么办呢？直接弄个demo看下，做个笔记记录下，免得下次又忘了。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;one&quot;&gt;</div><div class="line">  &lt;div id=&quot;two&quot;&gt;</div><div class="line">    &lt;div id=&quot;three&quot;&gt;</div><div class="line">      &lt;div id=&quot;four&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">  var one = document.getElementById(&apos;one&apos;);</div><div class="line">  var two = document.getElementById(&apos;two&apos;);</div><div class="line">  var three = document.getElementById(&apos;three&apos;);</div><div class="line">  var four = document.getElementById(&apos;four&apos;);</div><div class="line"></div><div class="line">  one.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;one&apos;);</div><div class="line">  &#125;, false);</div><div class="line">  two.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;two&apos;);</div><div class="line">  &#125;, false);</div><div class="line">  three.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;three&apos;);</div><div class="line">  &#125;, false);</div><div class="line">  four.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;four&apos;);</div><div class="line">  &#125;, false);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>上面代码将四个嵌套的div都绑定了冒泡，执行触发顺序为：<br>当点击one时，输出：one<br>当点击two时，输出：two one<br>当点击three时，输出：three two one<br>当点击four时，输出：four three two one   </p>
+<p>修改下代码，将上面<code>addEventListener</code>第三个参数改为<code>true</code>，则为捕获事件，执行顺序如下：<br>当点击one时，输出：one<br>当点击two时，输出：one two<br>当点击three时，输出：one two three<br>当点击four时，输出：one two three four   </p>
+<p>我们再来修改一下js代码，将第二个div改为捕获事件，其他不变：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">one.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;one&apos;);</div><div class="line">&#125;, false);</div><div class="line">two.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;two-capture&apos;);</div><div class="line">&#125;, true);</div><div class="line">three.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;three&apos;);</div><div class="line">&#125;, false);</div><div class="line">four.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;four&apos;);</div><div class="line">&#125;, false);</div></pre></td></tr></table></figure>
+<p>假设目标元素为four，执行代码，输出的是 two-capture four three one。<br>one为根元素祖先，浏览器会从one -&gt; two -&gt; three -&gt; four依次查找，直到找到目标元素four，接着开始向上冒泡 four -&gt; three -&gt; two -&gt; one<br>one为冒泡事件，忽略，<br>two为捕获事件，输出two-capture,<br>three为冒泡事件，忽略，<br>four为目标元素，输出four，然后执行冒泡，<br>three为冒泡事件，输出three，<br>two为捕获事件，忽略，<br>one为冒泡事件，输出one   </p>
+<p>现在测试一下某一元素同时绑定捕获和冒泡的请款，修改代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">one.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;one-bubble&apos;);</div><div class="line">&#125;, false);</div><div class="line">one.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;one-capture&apos;);</div><div class="line">&#125;, true);</div><div class="line">two.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;two&apos;);</div><div class="line">&#125;, false);</div><div class="line">three.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;three&apos;);</div><div class="line">&#125;, false);</div><div class="line">four.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;four&apos;);</div><div class="line">&#125;, false);</div></pre></td></tr></table></figure>
+<p>当目标元素为four时，触发事件，输出代码为：one-capture four three two one-bubble<br>当目标元素为one时，触发事件，输出代码为：one-bubble one-capture，这时发现他并没有先执行one的捕获事件，而是先执行了冒泡事件，这是因为one声明冒泡在声明捕获的前面</p>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><ul>
+<li>事件绑定了几次就出发几次   </li>
+<li>如果目标元素同时绑定捕获和冒泡，按照声明顺序执行   </li>
+<li>其他情况严格按照DOM2标准执行，先捕获后冒泡</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近看见一个题目，一个元素如果捕获和冒泡都绑定了，事件会触发几次，执行顺序如何？&lt;br&gt;没有想到答案，感觉知识匮乏，技术太差怎么办呢？直接弄个demo看下，做个笔记记录下，免得下次又忘了。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+      <category term="DOM2事件" scheme="http://yoursite.com/tags/DOM2%E4%BA%8B%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>关于javascript继承的学习笔记</title>

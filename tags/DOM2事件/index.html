@@ -6,27 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>git 分支操作 | LionHL</title>
+  <title>Tag: DOM2事件 | LionHL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。
-git 分支创建一个名为 dev 的分支1git checkout -b dev
-推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）1git push origin dev:dev
-or">
-<meta property="og:type" content="article">
-<meta property="og:title" content="git 分支操作">
-<meta property="og:url" content="http://yoursite.com/2017/03/13/git-branch/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="LionHL">
+<meta property="og:url" content="http://yoursite.com/tags/DOM2事件/index.html">
 <meta property="og:site_name" content="LionHL">
-<meta property="og:description" content="这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。
-git 分支创建一个名为 dev 的分支1git checkout -b dev
-推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）1git push origin dev:dev
-or">
-<meta property="og:updated_time" content="2017-06-30T08:39:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git 分支操作">
-<meta name="twitter:description" content="这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。
-git 分支创建一个名为 dev 的分支1git checkout -b dev
-推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）1git push origin dev:dev
-or">
+<meta name="twitter:title" content="LionHL">
   
     <link rel="alternative" href="/atom.xml" title="LionHL" type="application/atom+xml">
   
@@ -142,45 +129,36 @@ or">
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git-branch" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      git 分支操作
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/07/12/170712/" class="archive-article-date">
+  	<time datetime="2017-07-12T03:28:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-12</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/07/12/170712/">DOM元素捕获和冒泡都绑定了，触发几次？执行顺序如何？</a>
     </h1>
   
 
-        
-        <a href="/2017/03/13/git-branch/" class="archive-article-date">
-  	<time datetime="2017-03-13T06:35:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。</p>
-<h1 id="git-分支"><a href="#git-分支" class="headerlink" title="git 分支"></a>git 分支</h1><h3 id="创建一个名为-dev-的分支"><a href="#创建一个名为-dev-的分支" class="headerlink" title="创建一个名为 dev 的分支"></a>创建一个名为 dev 的分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b dev</div></pre></td></tr></table></figure>
-<h3 id="推送本地的dev分支，将其作为远程的dev分支-（本地分支名-远程分支名）"><a href="#推送本地的dev分支，将其作为远程的dev分支-（本地分支名-远程分支名）" class="headerlink" title="推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）"></a>推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin dev:dev</div></pre></td></tr></table></figure>
-<p>or<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin dev</div></pre></td></tr></table></figure></p>
-<h3 id="作了修改之后提交到远程dev分支"><a href="#作了修改之后提交到远程dev分支" class="headerlink" title="作了修改之后提交到远程dev分支"></a>作了修改之后提交到远程dev分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">git push -u origin dev  </div><div class="line">//此时有了跟踪分支，本地dev分支跟踪了 origin/dev</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看跟踪分支</div><div class="line">git branch -vv</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看远程分支</div><div class="line">git branch -r</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看所有分支</div><div class="line">git branch -a</div></pre></td></tr></table></figure>
-<h3 id="变基rebase"><a href="#变基rebase" class="headerlink" title="变基rebase"></a>变基rebase</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git checkout dev</div><div class="line">git rebase master</div><div class="line">//上面两步可合并为 git rebase master dev</div><div class="line">git checkout master</div><div class="line">git merge dev</div><div class="line">git push</div></pre></td></tr></table></figure>
-<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git branch -D dev</div><div class="line">git push origin --delete dev</div></pre></td></tr></table></figure>
-<h3 id="远程更新取回本地git-fetch"><a href="#远程更新取回本地git-fetch" class="headerlink" title="远程更新取回本地git fetch"></a>远程更新取回本地git fetch</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git fetch &lt;远程主机名&gt;</div><div class="line">//清理本地分支</div><div class="line">git fetch -p</div></pre></td></tr></table></figure>
-<h3 id="建立远程跟踪分支"><a href="#建立远程跟踪分支" class="headerlink" title="建立远程跟踪分支"></a>建立远程跟踪分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b serverfix origin/serverfix</div></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -190,120 +168,29 @@ or">
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">DOM2事件</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzUlEQVR42u3aS47DIBAFwNz/0h5p9savacCJVKwiktjFptUfPp94Xf9rvD/+PN5ZvHBxcdvca7iqlJx49+2dARcX9zw3CVLjV1Z3xs+53cfFxf0y7jjfSF6WBEdcXNzf4uapT7WgwsXF/U5uUvwkoIfSJSiNltVquLi4DW4n6Kz6vLG/i4uLW+RexZU3SedC3sPbcXFxj3DzFmenOZK3SKIwh4uLu5nbCTd5GZMf++EJuLi4R7jVoUj1QkZ+mOrgFhcXdzc3/2m1GVq9ZhG1aHFxcTdz83KlNdiIk5iHK1y4uLhHuHnAStqjncOUn4aLi7uZ26qZiqORvJ3amvfi4uIu4ubpRd4GnUtiHv6Fi4u7mdsfgSStz871TVxc3He5edKTB778MFHoxMXFPcKtFjnVkNRvwi64somLi1vkdi5dVaFzzVlcXNy3uJ326NzoZW7EgouLe5Kbr85EY65pUp7V4OLitrnVgDI+aj4+qQ50y4fBxcVtc5PglTc9+4OWhzCKi4t7kLuqeZEkRovTF1xc3Fe5cxez8qIrKopwcXF/kJsnTOXkBhcX9zi3OnCdS4nmWiGTtRouLm6DO3dhIr9ulRRCcy1XXFzcDdw/VqWfZmE4oioAAAAASUVORK5CYII=" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2017/06/29/js-traversal/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JavaScript中的遍历循环方法之map、forEach、for-in、for-of
-        
-      </div>
-    </a>
   
   
-    <a href="/2016/12/13/css-hack/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">css-hack</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-    <section id="comments">
-      <div id="disqus_thread"></div>
-        <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'lionhl'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </section>
-  
+    
 
 
           </div>
@@ -326,9 +213,9 @@ or">
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

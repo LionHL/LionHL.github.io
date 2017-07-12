@@ -6,27 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>git 分支操作 | LionHL</title>
+  <title>DOM元素捕获和冒泡都绑定了，触发几次？执行顺序如何？ | LionHL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。
-git 分支创建一个名为 dev 的分支1git checkout -b dev
-推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）1git push origin dev:dev
-or">
+  <meta name="description" content="最近看见一个题目，一个元素如果捕获和冒泡都绑定了，事件会触发几次，执行顺序如何？没有想到答案，感觉知识匮乏，技术太差怎么办呢？直接弄个demo看下，做个笔记记录下，免得下次又忘了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git 分支操作">
-<meta property="og:url" content="http://yoursite.com/2017/03/13/git-branch/index.html">
+<meta property="og:title" content="DOM元素捕获和冒泡都绑定了，触发几次？执行顺序如何？">
+<meta property="og:url" content="http://yoursite.com/2017/07/12/170712/index.html">
 <meta property="og:site_name" content="LionHL">
-<meta property="og:description" content="这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。
-git 分支创建一个名为 dev 的分支1git checkout -b dev
-推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）1git push origin dev:dev
-or">
-<meta property="og:updated_time" content="2017-06-30T08:39:51.000Z">
+<meta property="og:description" content="最近看见一个题目，一个元素如果捕获和冒泡都绑定了，事件会触发几次，执行顺序如何？没有想到答案，感觉知识匮乏，技术太差怎么办呢？直接弄个demo看下，做个笔记记录下，免得下次又忘了。">
+<meta property="og:updated_time" content="2017-07-12T06:18:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git 分支操作">
-<meta name="twitter:description" content="这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。
-git 分支创建一个名为 dev 的分支1git checkout -b dev
-推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）1git push origin dev:dev
-or">
+<meta name="twitter:title" content="DOM元素捕获和冒泡都绑定了，触发几次？执行顺序如何？">
+<meta name="twitter:description" content="最近看见一个题目，一个元素如果捕获和冒泡都绑定了，事件会触发几次，执行顺序如何？没有想到答案，感觉知识匮乏，技术太差怎么办呢？直接弄个demo看下，做个笔记记录下，免得下次又忘了。">
   
     <link rel="alternative" href="/atom.xml" title="LionHL" type="application/atom+xml">
   
@@ -142,38 +133,41 @@ or">
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git-branch" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-170712" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      git 分支操作
+      DOM元素捕获和冒泡都绑定了，触发几次？执行顺序如何？
     </h1>
   
 
         
-        <a href="/2017/03/13/git-branch/" class="archive-article-date">
-  	<time datetime="2017-03-13T06:35:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-13</time>
+        <a href="/2017/07/12/170712/" class="archive-article-date">
+  	<time datetime="2017-07-12T03:28:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>这里主要简单记录了一下一些git分支操作命令，方便自己查询用的。</p>
-<h1 id="git-分支"><a href="#git-分支" class="headerlink" title="git 分支"></a>git 分支</h1><h3 id="创建一个名为-dev-的分支"><a href="#创建一个名为-dev-的分支" class="headerlink" title="创建一个名为 dev 的分支"></a>创建一个名为 dev 的分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b dev</div></pre></td></tr></table></figure>
-<h3 id="推送本地的dev分支，将其作为远程的dev分支-（本地分支名-远程分支名）"><a href="#推送本地的dev分支，将其作为远程的dev分支-（本地分支名-远程分支名）" class="headerlink" title="推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）"></a>推送本地的dev分支，将其作为远程的dev分支 （本地分支名:远程分支名）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin dev:dev</div></pre></td></tr></table></figure>
-<p>or<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin dev</div></pre></td></tr></table></figure></p>
-<h3 id="作了修改之后提交到远程dev分支"><a href="#作了修改之后提交到远程dev分支" class="headerlink" title="作了修改之后提交到远程dev分支"></a>作了修改之后提交到远程dev分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">git push -u origin dev  </div><div class="line">//此时有了跟踪分支，本地dev分支跟踪了 origin/dev</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看跟踪分支</div><div class="line">git branch -vv</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看远程分支</div><div class="line">git branch -r</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//查看所有分支</div><div class="line">git branch -a</div></pre></td></tr></table></figure>
-<h3 id="变基rebase"><a href="#变基rebase" class="headerlink" title="变基rebase"></a>变基rebase</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">git checkout dev</div><div class="line">git rebase master</div><div class="line">//上面两步可合并为 git rebase master dev</div><div class="line">git checkout master</div><div class="line">git merge dev</div><div class="line">git push</div></pre></td></tr></table></figure>
-<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git branch -D dev</div><div class="line">git push origin --delete dev</div></pre></td></tr></table></figure>
-<h3 id="远程更新取回本地git-fetch"><a href="#远程更新取回本地git-fetch" class="headerlink" title="远程更新取回本地git fetch"></a>远程更新取回本地git fetch</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">git fetch &lt;远程主机名&gt;</div><div class="line">//清理本地分支</div><div class="line">git fetch -p</div></pre></td></tr></table></figure>
-<h3 id="建立远程跟踪分支"><a href="#建立远程跟踪分支" class="headerlink" title="建立远程跟踪分支"></a>建立远程跟踪分支</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b serverfix origin/serverfix</div></pre></td></tr></table></figure>
+        <p>最近看见一个题目，一个元素如果捕获和冒泡都绑定了，事件会触发几次，执行顺序如何？<br>没有想到答案，感觉知识匮乏，技术太差怎么办呢？直接弄个demo看下，做个笔记记录下，免得下次又忘了。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;one&quot;&gt;</div><div class="line">  &lt;div id=&quot;two&quot;&gt;</div><div class="line">    &lt;div id=&quot;three&quot;&gt;</div><div class="line">      &lt;div id=&quot;four&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">  var one = document.getElementById(&apos;one&apos;);</div><div class="line">  var two = document.getElementById(&apos;two&apos;);</div><div class="line">  var three = document.getElementById(&apos;three&apos;);</div><div class="line">  var four = document.getElementById(&apos;four&apos;);</div><div class="line"></div><div class="line">  one.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;one&apos;);</div><div class="line">  &#125;, false);</div><div class="line">  two.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;two&apos;);</div><div class="line">  &#125;, false);</div><div class="line">  three.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;three&apos;);</div><div class="line">  &#125;, false);</div><div class="line">  four.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;four&apos;);</div><div class="line">  &#125;, false);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>上面代码将四个嵌套的div都绑定了冒泡，执行触发顺序为：<br>当点击one时，输出：one<br>当点击two时，输出：two one<br>当点击three时，输出：three two one<br>当点击four时，输出：four three two one   </p>
+<p>修改下代码，将上面<code>addEventListener</code>第三个参数改为<code>true</code>，则为捕获事件，执行顺序如下：<br>当点击one时，输出：one<br>当点击two时，输出：one two<br>当点击three时，输出：one two three<br>当点击four时，输出：one two three four   </p>
+<p>我们再来修改一下js代码，将第二个div改为捕获事件，其他不变：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">one.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;one&apos;);</div><div class="line">&#125;, false);</div><div class="line">two.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;two-capture&apos;);</div><div class="line">&#125;, true);</div><div class="line">three.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;three&apos;);</div><div class="line">&#125;, false);</div><div class="line">four.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;four&apos;);</div><div class="line">&#125;, false);</div></pre></td></tr></table></figure>
+<p>假设目标元素为four，执行代码，输出的是 two-capture four three one。<br>one为根元素祖先，浏览器会从one -&gt; two -&gt; three -&gt; four依次查找，直到找到目标元素four，接着开始向上冒泡 four -&gt; three -&gt; two -&gt; one<br>one为冒泡事件，忽略，<br>two为捕获事件，输出two-capture,<br>three为冒泡事件，忽略，<br>four为目标元素，输出four，然后执行冒泡，<br>three为冒泡事件，输出three，<br>two为捕获事件，忽略，<br>one为冒泡事件，输出one   </p>
+<p>现在测试一下某一元素同时绑定捕获和冒泡的请款，修改代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">one.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;one-bubble&apos;);</div><div class="line">&#125;, false);</div><div class="line">one.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;one-capture&apos;);</div><div class="line">&#125;, true);</div><div class="line">two.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;two&apos;);</div><div class="line">&#125;, false);</div><div class="line">three.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;three&apos;);</div><div class="line">&#125;, false);</div><div class="line">four.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">  console.log(&apos;four&apos;);</div><div class="line">&#125;, false);</div></pre></td></tr></table></figure>
+<p>当目标元素为four时，触发事件，输出代码为：one-capture four three two one-bubble<br>当目标元素为one时，触发事件，输出代码为：one-bubble one-capture，这时发现他并没有先执行one的捕获事件，而是先执行了冒泡事件，这是因为one声明冒泡在声明捕获的前面</p>
+<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><ul>
+<li>事件绑定了几次就出发几次   </li>
+<li>如果目标元素同时绑定捕获和冒泡，按照声明顺序执行   </li>
+<li>其他情况严格按照DOM2标准执行，先捕获后冒泡</li>
+</ul>
+
       
 
       
@@ -190,7 +184,11 @@ or">
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">javascript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">DOM2事件</a>
         		</li>
       		
 		</ul>
@@ -246,7 +244,7 @@ or">
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzUlEQVR42u3aS47DIBAFwNz/0h5p9savacCJVKwiktjFptUfPp94Xf9rvD/+PN5ZvHBxcdvca7iqlJx49+2dARcX9zw3CVLjV1Z3xs+53cfFxf0y7jjfSF6WBEdcXNzf4uapT7WgwsXF/U5uUvwkoIfSJSiNltVquLi4DW4n6Kz6vLG/i4uLW+RexZU3SedC3sPbcXFxj3DzFmenOZK3SKIwh4uLu5nbCTd5GZMf++EJuLi4R7jVoUj1QkZ+mOrgFhcXdzc3/2m1GVq9ZhG1aHFxcTdz83KlNdiIk5iHK1y4uLhHuHnAStqjncOUn4aLi7uZ26qZiqORvJ3amvfi4uIu4ubpRd4GnUtiHv6Fi4u7mdsfgSStz871TVxc3He5edKTB778MFHoxMXFPcKtFjnVkNRvwi64somLi1vkdi5dVaFzzVlcXNy3uJ326NzoZW7EgouLe5Kbr85EY65pUp7V4OLitrnVgDI+aj4+qQ50y4fBxcVtc5PglTc9+4OWhzCKi4t7kLuqeZEkRovTF1xc3Fe5cxez8qIrKopwcXF/kJsnTOXkBhcX9zi3OnCdS4nmWiGTtRouLm6DO3dhIr9ulRRCcy1XXFzcDdw/VqWfZmE4oioAAAAASUVORK5CYII=" alt="微信分享二维码">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxklEQVR42u3ayw6DIBBGYd//pe22iZGen4HRJoeVaVU+WJC5eBx4nF/j+5frPdf77569vmHZkCtXbpl7DsfdPauWwQ1y5crt596dGON7Kgjyfrly5f4XN5gAvFOuXLn/zh2nLmnAJFeu3Ddz0xAkLWqkydWCXE2uXLkFLp9s3/WW+q5cuXKnuGc4SBmU/xvPLleu3BYuP1BI2EGCkvQgkytXbj93cn0AQRYWb41cuXJbuKtyJl5yTaGTeyxXrtwClzc50t/JkRQ3WuTKldvI5QENwc1VPscNG7ly5T7FJQXN8ZLSDzTjD8LkypXbwuWHUUrkDdp4YXLlyt3MnZu+EvqQoGoy+ZErV+4ibv1zivryeFFGrly5nVze3uCtlLlloCaNXLly27kk+alMXGm7ypUrt5+bpi78mpRUeColV67cTi4Pd8ZhzVEeP94jV67czdwzHJWn0mNOrly5T3ErqUuaGvHma1qUkStX7g4uP7xII4Q0ZnhqFJ++cuXKXcrlqU7afK0kSEGTVa5cuY9y0zYJD31Q/CVXrtxXcnkoM9dY/bFZcuXKbeSuLZKmCRXfFLly5fZw08ZnPbHh5dFSfVeuXLkz3A8/x1LB/iLeggAAAABJRU5ErkJggg==" alt="微信分享二维码">
     </div>
 </div>
 
@@ -260,18 +258,9 @@ or">
   
 <nav id="article-nav">
   
-    <a href="/2017/06/29/js-traversal/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          JavaScript中的遍历循环方法之map、forEach、for-in、for-of
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/12/13/css-hack/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">css-hack</div>
+    <a href="/2017/07/07/inherit/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于javascript继承的学习笔记</div>
       <i class="icon-circle-right"></i>
     </a>
   
