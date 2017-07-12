@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-07-12T06:18:38.000Z</updated>
+  <updated>2017-07-12T06:32:49.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/07/12/170712/"/>
     <id>http://yoursite.com/2017/07/12/170712/</id>
     <published>2017-07-12T03:28:27.000Z</published>
-    <updated>2017-07-12T06:18:38.000Z</updated>
+    <updated>2017-07-12T06:32:49.000Z</updated>
     
     <content type="html"><![CDATA[<p>最近看见一个题目，一个元素如果捕获和冒泡都绑定了，事件会触发几次，执行顺序如何？<br>没有想到答案，感觉知识匮乏，技术太差怎么办呢？直接弄个demo看下，做个笔记记录下，免得下次又忘了。<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;div id=&quot;one&quot;&gt;</div><div class="line">  &lt;div id=&quot;two&quot;&gt;</div><div class="line">    &lt;div id=&quot;three&quot;&gt;</div><div class="line">      &lt;div id=&quot;four&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">  var one = document.getElementById(&apos;one&apos;);</div><div class="line">  var two = document.getElementById(&apos;two&apos;);</div><div class="line">  var three = document.getElementById(&apos;three&apos;);</div><div class="line">  var four = document.getElementById(&apos;four&apos;);</div><div class="line"></div><div class="line">  one.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;one&apos;);</div><div class="line">  &#125;, false);</div><div class="line">  two.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;two&apos;);</div><div class="line">  &#125;, false);</div><div class="line">  three.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;three&apos;);</div><div class="line">  &#125;, false);</div><div class="line">  four.addEventListener(&apos;click&apos;, function () &#123;</div><div class="line">    console.log(&apos;four&apos;);</div><div class="line">  &#125;, false);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
 <p>上面代码将四个嵌套的div都绑定了冒泡，执行触发顺序为：<br>当点击one时，输出：one<br>当点击two时，输出：two one<br>当点击three时，输出：three two one<br>当点击four时，输出：four three two one   </p>
@@ -47,7 +47,7 @@
     
       <category term="笔记" scheme="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
     
       <category term="DOM2事件" scheme="http://yoursite.com/tags/DOM2%E4%BA%8B%E4%BB%B6/"/>
     

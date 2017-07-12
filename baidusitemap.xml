@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yoursite.com/2017/07/12/170712/</loc>
-    <lastmod>2017-07-12T06:18:38.000Z</lastmod>
+    <lastmod>2017-07-12T06:32:49.000Z</lastmod>
     <data>
         <display>
         <title>DOM元素捕获和冒泡都绑定了，触发几次？执行顺序如何？</title>
@@ -13,7 +13,7 @@
         
         <tag>笔记</tag>
          
-        <tag>javascript</tag>
+        <tag>js</tag>
          
         <tag>DOM2事件</tag>
          
